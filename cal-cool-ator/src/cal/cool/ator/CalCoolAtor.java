@@ -36,9 +36,10 @@ public class CalCoolAtor {
        {
               return (Math.pow(a,b));
        }
-     public static double sqrt(double a)
+     public static double root(double a)
        { //if(a==0)return 0
-              return (Math.sqrt(a));
+            if(a<0) throw new IllegalArgumentException("Odmocnina zo zaporneho cisla");
+            return (Math.sqrt(a));
        }
      public static long factorial(long a)
        {
