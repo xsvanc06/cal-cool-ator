@@ -82,6 +82,12 @@ public class CalCoolAtorTest {
         assertEquals(expResult, testClass.factorial(x1));
     }
     
+    @Test(expected=IllegalArgumentException.class)
+    public void testFactorialIllegal() {
+        long x1 = -5;
+        long expResult = 1;
+        assertEquals(expResult, testClass.factorial(x1));
+    }
 
     /**
      * Test of sub method, of class CalCoolAtor.
@@ -136,29 +142,60 @@ public class CalCoolAtorTest {
         assertEquals(expResult, testClass.divide(x1, x2), 0.000001);
         x1 = 432413.91213;
         x2 = -7342.5232;
-        expResult = 58.89173249462;
+        expResult = -58.89173249462;
         assertEquals(expResult, testClass.divide(x1, x2), 0.000001);
     }
-
+    
+    
+    
+    @Test(expected=IllegalArgumentException.class)
+    public void testDivideIllegal() {
+        double x1 = 12345.0;
+        double x2 = 0.0;
+        double expResult = 0.0;
+        assertEquals(expResult, testClass.divide(x1,x2), 0.0000001);
+    }
+    
+    
+    
+    @Test
+    public void testRoot() {
+        double x1 = 0.0;
+        double expResult = 0.0;
+        assertEquals(expResult, testClass.root(x1), 0.000001);
+        x1 = 9.0;
+        expResult = 3.0;
+        assertEquals(expResult, testClass.root(x1), 0.000001);
+    }
+    
+    
     /**
      * Test of sqrt method, of class CalCoolAtor.
      */
-    @Test
-    public void testSqrt() {
-        double x1 = 0.0;
-        double expResult = 0.0;
-        assertEquals(expResult, testClass.sqrt(x1), 0.0);
+    @Test(expected=IllegalArgumentException.class)
+    public void testRootIllegal() {
+        double x1 = -4.0;
+        double expResult = 0;
+        assertEquals(expResult, testClass.root(x1), 0.0000001);
+        x1 = -3.2;
+        expResult = 0;
+        assertEquals(expResult, testClass.root(x1), 0.0000001);
     }
+    
 
     /**
      * Test of power method, of class CalCoolAtor.
      */
     @Test
     public void testPower() {
-        double x1 = 0.0;
-        double y1 = 0.0;
-        double expResult = 1.0;
-        assertEquals(expResult, testClass.power(x1, y1), 0.0);
+        double x1 = 9.0;
+        int y1 = 2;
+        double expResult = 81.0;
+        assertEquals(expResult, testClass.power(x1, y1), 0.0000001);
+        x1 = 4.5;
+        y1 = 4;
+        expResult = 410.0625;
+        assertEquals(expResult, testClass.power(x1, y1), 0.0000001);
     }
 
     /**
