@@ -36,21 +36,22 @@ public class CalCoolAtor {
        {
               return (Math.pow(a,b));
        }
-     public static double root(double a)
+    public static double root(double a)
        { //if(a==0)return 0
             if(a<0) throw new IllegalArgumentException("Odmocnina zo zaporneho cisla");
             return (Math.sqrt(a));
        }
-     public static long factorial(long a)
-       {
-              long vysledok;
-       if(a==0 || a==1)
-         return 1;
+    public static long factorial(int a)
+        {
+            long vysledok;
+            if(a<0) throw new IllegalArgumentException("Faktorial zo zaporneho cisla");
+            if(a==0 || a==1)
+            return 1;
 
        vysledok = factorial(a-1) * a;
        return vysledok;
        }
-       public static void main(String[] args)
+    public static void main(String[] args)
        {
               
     
