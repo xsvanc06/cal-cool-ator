@@ -157,7 +157,7 @@ public class CalCoolAtorTest {
     public void testPower() {
         double x1 = 0.0;
         double y1 = 0.0;
-        double expResult = 0.0;
+        double expResult = 1.0;
         assertEquals(expResult, testClass.power(x1, y1), 0.0);
     }
 
