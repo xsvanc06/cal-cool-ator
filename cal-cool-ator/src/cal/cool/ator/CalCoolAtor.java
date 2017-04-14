@@ -7,49 +7,51 @@ package cal.cool.ator;
 
 /**
  *
- * @author Marek
+ * @author Matúš Švancár
  */
 public class CalCoolAtor {
-
-    public double add(double x1,double x2)
-    {
-        return x1+x2;
-    }
- 
-    /**
-     *
-     * @param x1
-     * @return
-     */
-    public long factorial(long x1) 
-   {
-       return 0;
-   }
-   public double sub(double x1,double x2)
-   {
-       return x1-x2;
-   }
-   public double multiply(double x1,double x2)
-   {
-       return 0;
-   }
-   public double divide(double x1,double x2)
-   {
-       return 0;
-   }
-   public double sqrt(double x1)
-   {
-       return 0;
-   }
-   public double power(double x1,double y1)
-   {
-       return 0;
-   }
-   public double neg(double x1)
-   {
-       return 0;
-   }
     
+    
+    public static double add(double a, double b)
+       {
+              return (a+b);
+       }
+    public static double sub(double a, double b)
+       {
+              return (a-b);
+       }
+    public static double neg(double a)
+       {
+              return (a*-1);
+       }
+    public static double multiply(double a, double b)
+       {
+              return (a*b);
+       }
+    public static double divide(double a, double b)
+       {    if(b==0) throw new IllegalArgumentException("Ajajajaja delenie nulou");
+              return (a/b);
+       }
+    public static double power(double a, double b)
+       {
+              return (Math.pow(a,b));
+       }
+     public static double sqrt(double a)
+       { //if(a==0)return 0
+              return (Math.sqrt(a));
+       }
+     public static long factorial(long a)
+       {
+              long vysledok;
+       if(a==0 || a==1)
+         return 1;
+
+       vysledok = factorial(a-1) * a;
+       return vysledok;
+       }
+       public static void main(String[] args)
+       {
+              
+    
+       }
 }
-    
-
