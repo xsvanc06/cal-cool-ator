@@ -44,7 +44,7 @@ public class CalCoolAtorTest {
     }
 
     /**
-     * Test of add method
+     * Test of add method, of class CalCoolAtor.
      */
     @Test
     public void testAdd() {
@@ -67,11 +67,11 @@ public class CalCoolAtorTest {
     }
 
     /**
-     * Test of factorial method
+     * Test of factorial method, of class CalCoolAtor.
      */
     @Test
     public void testFactorial() {
-        int x1 = 0;
+        long x1 = 0;
         long expResult = 1;
         assertEquals(expResult, testClass.factorial(x1));
         x1 = 1;
@@ -82,18 +82,15 @@ public class CalCoolAtorTest {
         assertEquals(expResult, testClass.factorial(x1));
     }
     
-    /**
-     * Test of factorial method with negative base
-     */
     @Test(expected=IllegalArgumentException.class)
     public void testFactorialIllegal() {
-        int x1 = -5;
+        long x1 = -5;
         long expResult = 1;
         assertEquals(expResult, testClass.factorial(x1));
     }
 
     /**
-     * Test of sub method
+     * Test of sub method, of class CalCoolAtor.
      */
     @Test
     public void testSub() {
@@ -112,7 +109,7 @@ public class CalCoolAtorTest {
     }
 
     /**
-     * Test of multiply method
+     * Test of multiply method, of class CalCoolAtor.
      */
     @Test
     public void testMultiply() {
@@ -131,7 +128,7 @@ public class CalCoolAtorTest {
     }
 
     /**
-     * Test of divide method
+     * Test of divide method, of class CalCoolAtor.
      */
     @Test
     public void testDivide() {
@@ -149,9 +146,8 @@ public class CalCoolAtorTest {
         assertEquals(expResult, testClass.divide(x1, x2), 0.000001);
     }
     
-    /**
-     * Test of division by 0
-     */
+    
+    
     @Test(expected=IllegalArgumentException.class)
     public void testDivideIllegal() {
         double x1 = 12345.0;
@@ -160,9 +156,8 @@ public class CalCoolAtorTest {
         assertEquals(expResult, testClass.divide(x1,x2), 0.0000001);
     }
     
-    /**
-     * Test of square root method
-     */
+    
+    
     @Test
     public void testRoot() {
         double x1 = 0.0;
@@ -175,7 +170,7 @@ public class CalCoolAtorTest {
     
     
     /**
-     * Test of square root method with negative base
+     * Test of sqrt method, of class CalCoolAtor.
      */
     @Test(expected=IllegalArgumentException.class)
     public void testRootIllegal() {
@@ -189,7 +184,7 @@ public class CalCoolAtorTest {
     
 
     /**
-     * Test of power method
+     * Test of power method, of class CalCoolAtor.
      */
     @Test
     public void testPower() {
@@ -204,7 +199,7 @@ public class CalCoolAtorTest {
     }
 
     /**
-     * Test of neg method
+     * Test of neg method, of class CalCoolAtor.
      */
     @Test
     public void testNeg() {
