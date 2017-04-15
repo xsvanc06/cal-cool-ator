@@ -38,13 +38,8 @@
                           <Component id="four" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="one" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
                           <Component id="neg" alignment="1" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="seven" min="-2" pref="150" max="-2" attributes="0"/>
-                                  <Component id="factorial" min="-2" pref="150" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="seven" min="-2" pref="150" max="-2" attributes="0"/>
+                          <Component id="factorial" min="-2" pref="150" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
@@ -276,6 +271,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eightActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="nine">
@@ -295,6 +291,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nineActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="sub">
@@ -353,6 +350,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fiveActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="six">

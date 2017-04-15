@@ -11,6 +11,10 @@ package cal_cool_ator;
  */
 public class gui extends javax.swing.JFrame {
 
+    double numfirst;
+    double numsecond;
+    double result;
+    String operations;
     /**
      * Creates new form gui
      */
@@ -134,6 +138,11 @@ public class gui extends javax.swing.JFrame {
                 farba(evt);
             }
         });
+        eight.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eightActionPerformed(evt);
+            }
+        });
 
         nine.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         nine.setText("9");
@@ -142,6 +151,11 @@ public class gui extends javax.swing.JFrame {
         nine.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
+            }
+        });
+        nine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nineActionPerformed(evt);
             }
         });
 
@@ -177,6 +191,11 @@ public class gui extends javax.swing.JFrame {
         five.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
+            }
+        });
+        five.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fiveActionPerformed(evt);
             }
         });
 
@@ -340,11 +359,8 @@ public class gui extends javax.swing.JFrame {
                             .addComponent(four, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(one, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(neg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(0, 0, 0)))
+                            .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,31 +445,37 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-        // TODO add your handling code here:
+         // TODO add your handling code here:
     }//GEN-LAST:event_clearActionPerformed
-
+         
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
-        // TODO add your handling code here:
+        String Writenum = jTextField2.getText() + seven.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_sevenActionPerformed
 
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
-        // TODO add your handling code here:
+        String Writenum = jTextField2.getText() + four.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
-        // TODO add your handling code here:
+        String Writenum = jTextField2.getText() + six.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
-        // TODO add your handling code here:
+        String Writenum = jTextField2.getText() + one.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
-        // TODO add your handling code here:
+        String Writenum = jTextField2.getText() + three.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
-        // TODO add your handling code here:
+        String Writenum = jTextField2.getText() + two.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_twoActionPerformed
 
     private void negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negActionPerformed
@@ -461,7 +483,8 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_negActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
-        // TODO add your handling code here:
+        String Writenum = jTextField2.getText() + zero.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_zeroActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
@@ -469,12 +492,27 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_pointActionPerformed
 
     private void farba(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_farba
-       
+      
     }//GEN-LAST:event_farba
 
     private void factorialfarba(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_factorialfarba
         // TODO add your handling code here:
     }//GEN-LAST:event_factorialfarba
+
+    private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
+         String Writenum = jTextField2.getText() + nine.getText();
+        jTextField2.setText(Writenum);
+    }//GEN-LAST:event_nineActionPerformed
+
+    private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
+        String Writenum = jTextField2.getText() + eight.getText();
+        jTextField2.setText(Writenum);
+    }//GEN-LAST:event_eightActionPerformed
+
+    private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
+        String Writenum = jTextField2.getText() + five.getText();
+        jTextField2.setText(Writenum);
+    }//GEN-LAST:event_fiveActionPerformed
 
     /**
      * @param args the command line arguments
