@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cal.cool.ator;
+package cal_cool_ator;
 
+import cal_cool_ator.CalCoolAtor;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
