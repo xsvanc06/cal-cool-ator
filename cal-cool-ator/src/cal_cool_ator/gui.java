@@ -5,6 +5,7 @@
  */
 package cal_cool_ator;
 
+import java.awt.Toolkit;
 import static java.lang.Boolean.TRUE;
 
 /**
@@ -17,13 +18,14 @@ public class gui extends javax.swing.JFrame {
     double numsecond;
     double result;
     String operations;
-    boolean zeroflag = true;
+    boolean zeroflag = true;    
     
     /**
      * Creates new form gui
      */
     public gui() {
         initComponents();
+        setIcon();
     }
 
     /**
@@ -690,4 +692,8 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JButton two;
     private javax.swing.JButton zero;
     // End of variables declaration//GEN-END:variables
+
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+    }
 }
