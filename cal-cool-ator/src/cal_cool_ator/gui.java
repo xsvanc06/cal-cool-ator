@@ -31,6 +31,8 @@ public class gui extends javax.swing.JFrame {
     public gui() {
         initComponents();
         setIcon();
+        setResizable(false);
+        setSize(600, 1000);
     }
     
     /**
@@ -44,6 +46,8 @@ public class gui extends javax.swing.JFrame {
 
         jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jInternalFrame2 = new javax.swing.JInternalFrame();
         jTextField2 = new javax.swing.JTextField();
         clear = new javax.swing.JButton();
         root = new javax.swing.JButton();
@@ -80,12 +84,42 @@ public class gui extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        jInternalFrame1.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jInternalFrame2.setVisible(true);
+
+        javax.swing.GroupLayout jInternalFrame2Layout = new javax.swing.GroupLayout(jInternalFrame2.getContentPane());
+        jInternalFrame2.getContentPane().setLayout(jInternalFrame2Layout);
+        jInternalFrame2Layout.setHorizontalGroup(
+            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jInternalFrame2Layout.setVerticalGroup(
+            jInternalFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jTextField2.setFont(new java.awt.Font("Open Sans", 0, 48)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(30, 30, 30));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField2.setText("0 ");
+        jTextField2.setText("0");
+        jTextField2.setAlignmentX(0.0F);
+        jTextField2.setAlignmentY(0.0F);
+        jTextField2.setAutoscrolls(false);
+        jTextField2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jTextField2.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -102,13 +136,12 @@ public class gui extends javax.swing.JFrame {
         clear.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         clear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numc.jpg"))); // NOI18N
         clear.setActionCommand("c");
+        clear.setAlignmentY(0.0F);
         clear.setBorder(null);
         clear.setBorderPainted(false);
         clear.setMargin(new java.awt.Insets(0, 0, 0, 0));
-        clear.setOpaque(false);
         clear.setPreferredSize(new java.awt.Dimension(29, 59));
         clear.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numc-hover.jpg"))); // NOI18N
-        clear.setVerifyInputWhenFocusTarget(false);
         clear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -124,6 +157,7 @@ public class gui extends javax.swing.JFrame {
         root.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         root.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numsqrt.png"))); // NOI18N
         root.setToolTipText("");
+        root.setAlignmentY(0.0F);
         root.setBorder(null);
         root.setBorderPainted(false);
         root.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -143,6 +177,7 @@ public class gui extends javax.swing.JFrame {
         power.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         power.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numxn.png"))); // NOI18N
         power.setToolTipText("");
+        power.setAlignmentY(0.0F);
         power.setBorder(null);
         power.setBorderPainted(false);
         power.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -161,6 +196,7 @@ public class gui extends javax.swing.JFrame {
         add.setBackground(java.awt.Color.white);
         add.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+.png"))); // NOI18N
+        add.setAlignmentY(0.0F);
         add.setBorder(null);
         add.setBorderPainted(false);
         add.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -179,6 +215,7 @@ public class gui extends javax.swing.JFrame {
         seven.setBackground(java.awt.Color.white);
         seven.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         seven.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num7.jpg"))); // NOI18N
+        seven.setAlignmentY(0.0F);
         seven.setBorder(null);
         seven.setBorderPainted(false);
         seven.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -198,6 +235,7 @@ public class gui extends javax.swing.JFrame {
         eight.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         eight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num8.jpg"))); // NOI18N
         eight.setToolTipText("");
+        eight.setAlignmentY(0.0F);
         eight.setBorder(null);
         eight.setBorderPainted(false);
         eight.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -219,6 +257,7 @@ public class gui extends javax.swing.JFrame {
         nine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num9.jpg"))); // NOI18N
         nine.setToolTipText("");
         nine.setActionCommand("9");
+        nine.setAlignmentY(0.0F);
         nine.setBorder(null);
         nine.setBorderPainted(false);
         nine.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -238,6 +277,7 @@ public class gui extends javax.swing.JFrame {
         sub.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         sub.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num-.png"))); // NOI18N
         sub.setToolTipText("");
+        sub.setAlignmentY(0.0F);
         sub.setBorder(null);
         sub.setBorderPainted(false);
         sub.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -256,6 +296,7 @@ public class gui extends javax.swing.JFrame {
         four.setBackground(java.awt.Color.white);
         four.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         four.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num4.jpg"))); // NOI18N
+        four.setAlignmentY(0.0F);
         four.setBorder(null);
         four.setBorderPainted(false);
         four.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -274,6 +315,7 @@ public class gui extends javax.swing.JFrame {
         five.setBackground(java.awt.Color.white);
         five.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         five.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num5.jpg"))); // NOI18N
+        five.setAlignmentY(0.0F);
         five.setBorder(null);
         five.setBorderPainted(false);
         five.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -292,6 +334,7 @@ public class gui extends javax.swing.JFrame {
         six.setBackground(java.awt.Color.white);
         six.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         six.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num6.jpg"))); // NOI18N
+        six.setAlignmentY(0.0F);
         six.setBorder(null);
         six.setBorderPainted(false);
         six.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -311,6 +354,7 @@ public class gui extends javax.swing.JFrame {
         mul.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         mul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numx.png"))); // NOI18N
         mul.setToolTipText("");
+        mul.setAlignmentY(0.0F);
         mul.setBorder(null);
         mul.setBorderPainted(false);
         mul.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -330,6 +374,7 @@ public class gui extends javax.swing.JFrame {
         one.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         one.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num1.jpg"))); // NOI18N
         one.setToolTipText("");
+        one.setAlignmentY(0.0F);
         one.setBorder(null);
         one.setBorderPainted(false);
         one.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -351,6 +396,7 @@ public class gui extends javax.swing.JFrame {
         two.setBackground(java.awt.Color.white);
         two.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         two.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num2.jpg"))); // NOI18N
+        two.setAlignmentY(0.0F);
         two.setBorder(null);
         two.setBorderPainted(false);
         two.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -369,6 +415,7 @@ public class gui extends javax.swing.JFrame {
         three.setBackground(java.awt.Color.white);
         three.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         three.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num3.jpg"))); // NOI18N
+        three.setAlignmentY(0.0F);
         three.setBorder(null);
         three.setBorderPainted(false);
         three.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -387,6 +434,7 @@ public class gui extends javax.swing.JFrame {
         div.setBackground(java.awt.Color.white);
         div.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         div.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numdiv.png"))); // NOI18N
+        div.setAlignmentY(0.0F);
         div.setBorder(null);
         div.setBorderPainted(false);
         div.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -405,6 +453,7 @@ public class gui extends javax.swing.JFrame {
         neg.setBackground(java.awt.Color.white);
         neg.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         neg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+-.png"))); // NOI18N
+        neg.setAlignmentY(0.0F);
         neg.setBorder(null);
         neg.setBorderPainted(false);
         neg.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -423,6 +472,7 @@ public class gui extends javax.swing.JFrame {
         zero.setBackground(java.awt.Color.white);
         zero.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         zero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num0.jpg"))); // NOI18N
+        zero.setAlignmentY(0.0F);
         zero.setBorder(null);
         zero.setBorderPainted(false);
         zero.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -442,6 +492,7 @@ public class gui extends javax.swing.JFrame {
         point.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         point.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numpoint.png"))); // NOI18N
         point.setToolTipText("");
+        point.setAlignmentY(0.0F);
         point.setBorder(null);
         point.setBorderPainted(false);
         point.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -460,6 +511,7 @@ public class gui extends javax.swing.JFrame {
         eq.setBackground(java.awt.Color.white);
         eq.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         eq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num=.png"))); // NOI18N
+        eq.setAlignmentY(0.0F);
         eq.setBorder(null);
         eq.setBorderPainted(false);
         eq.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -478,6 +530,7 @@ public class gui extends javax.swing.JFrame {
         factorial.setBackground(java.awt.Color.white);
         factorial.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         factorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numfact.png"))); // NOI18N
+        factorial.setAlignmentY(0.0F);
         factorial.setBorder(null);
         factorial.setBorderPainted(false);
         factorial.setMargin(new java.awt.Insets(0, 0, 0, 0));
@@ -497,52 +550,50 @@ public class gui extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField2)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(eq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(four, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(one, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(neg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(nine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addComponent(power, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, 0)
-                                        .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, 0)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(mul, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addComponent(eq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createSequentialGroup()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(four, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(one, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(neg, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(seven, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(factorial, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 150, Short.MAX_VALUE)
+                                        .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 150, Short.MAX_VALUE)))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(0, 0, 0)
+                                    .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(0, 0, 0)
+                                    .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGap(0, 0, 0)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(mul, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, 0)
+                            .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -840,6 +891,8 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JButton factorial;
     private javax.swing.JButton five;
     private javax.swing.JButton four;
+    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JInternalFrame jInternalFrame2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
