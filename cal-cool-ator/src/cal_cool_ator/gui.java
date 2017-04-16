@@ -542,7 +542,7 @@ public class gui extends javax.swing.JFrame {
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
         if (jTextField2.getText().equals("0 ")){
-            jTextField2.setText("0.");
+            jTextField2.setText("0");
         }
         String Writenum = jTextField2.getText() + point.getText();
         jTextField2.setText(Writenum);
