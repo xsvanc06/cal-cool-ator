@@ -122,6 +122,11 @@ public class gui extends javax.swing.JFrame {
                 farba(evt);
             }
         });
+        power.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                powerActionPerformed(evt);
+            }
+        });
 
         add.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         add.setText("+");
@@ -652,6 +657,11 @@ public class gui extends javax.swing.JFrame {
                 ans = f.format(result);
                 jTextField2.setText(ans);
                 break;
+            case "^":
+                result = CalCoolAtor.power(numfirst, numsecond);
+                ans = f.format(result);
+                jTextField2.setText(ans);
+                break;    
 
     }//GEN-LAST:event_eqActionPerformed
     }
@@ -682,6 +692,12 @@ public class gui extends javax.swing.JFrame {
               evt.consume();
           }
     }//GEN-LAST:event_jTextField2KeyTyped
+
+    private void powerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerActionPerformed
+        numfirst = Double.parseDouble(jTextField2.getText());
+        jTextField2.setText("");
+        operations="^";
+    }//GEN-LAST:event_powerActionPerformed
 
     /**
      * @param args the command line arguments
