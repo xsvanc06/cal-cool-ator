@@ -629,22 +629,22 @@ public class gui extends javax.swing.JFrame {
         switch(operations){
             case "+":
                 result = CalCoolAtor.add(numfirst,numsecond);
-                ans = String.format("%.0f", result);
+                ans = f.format(result);
                 jTextField2.setText(ans);
                 break;
             case "-":
                 result = CalCoolAtor.sub(numfirst, numsecond);
-                ans = String.format("%.0f", result);
+                ans = f.format(result);
                 jTextField2.setText(ans);
                 break;
             case "*":
                 result = CalCoolAtor.multiply(numfirst, numsecond);
-                ans = String.format("%.0f", result);
+                ans = f.format(result);
                 jTextField2.setText(ans);
                 break;
             case "/":
                 result = CalCoolAtor.divide(numfirst, numsecond);
-                ans = String.format("%.0f", result);
+                ans = f.format(result);
                 jTextField2.setText(ans);
                 break;
 
