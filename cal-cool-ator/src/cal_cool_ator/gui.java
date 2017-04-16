@@ -6,6 +6,7 @@
 package cal_cool_ator;
 
 import java.awt.Toolkit;
+import java.text.DecimalFormat;
 import static java.lang.Boolean.TRUE;
 
 /**
@@ -609,25 +610,26 @@ public class gui extends javax.swing.JFrame {
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
         String ans;
         numsecond = Double.parseDouble(jTextField2.getText());
+        DecimalFormat f = new DecimalFormat("0.#########");
         
         if (operations == "+"){
             result = numfirst + numsecond;
-            ans = String.format("%.0f", result);
+            ans = f.format(result);
             jTextField2.setText(ans);
         }
         else if (operations == "-"){
             result = numfirst - numsecond;
-            ans = String.format("%.0f", result);
+            ans = f.format(result);
             jTextField2.setText(ans);
         }
         else if (operations == "*"){
             result = numfirst * numsecond;
-            ans = String.format("%.0f", result);
+            ans = f.format(result);
             jTextField2.setText(ans);
         }
         else if (operations == "/"){
             result = numfirst / numsecond;
-            ans = String.format("%.0f", result);
+            ans = f.format(result);
             jTextField2.setText(ans);
         }
     }//GEN-LAST:event_eqActionPerformed
