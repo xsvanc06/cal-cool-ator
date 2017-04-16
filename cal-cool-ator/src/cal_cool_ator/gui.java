@@ -478,60 +478,48 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + seven.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sevenActionPerformed
-
+    
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + four.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + six.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + one.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + three.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + two.getText();
         jTextField2.setText(Writenum);
@@ -545,20 +533,16 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_negActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + zero.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_zeroActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
-            jTextField2.setText("0");
-            zeroflag = false;
+        if (jTextField2.getText().equals("0 ")){
+            jTextField2.setText("0.");
         }
         String Writenum = jTextField2.getText() + point.getText();
         jTextField2.setText(Writenum);
@@ -573,30 +557,24 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factorialfarba
 
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + nine.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_nineActionPerformed
 
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + eight.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_eightActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
-        Double check = Double.parseDouble(jTextField2.getText());
-        if (check == 0 && zeroflag == true){
+        if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
-            zeroflag = false;
         }
         String Writenum = jTextField2.getText() + five.getText();
         jTextField2.setText(Writenum);
