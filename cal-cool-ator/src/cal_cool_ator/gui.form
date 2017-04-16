@@ -231,6 +231,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="seven">
@@ -311,6 +312,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="subActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="four">
@@ -391,6 +393,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="mulActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="one">
@@ -471,6 +474,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="divActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="neg">
@@ -551,6 +555,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="farba"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="eqActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="factorial">

@@ -5,6 +5,8 @@
  */
 package cal_cool_ator;
 
+import static java.lang.Boolean.TRUE;
+
 /**
  *
  * @author Matúš Švancár
@@ -15,6 +17,8 @@ public class gui extends javax.swing.JFrame {
     double numsecond;
     double result;
     String operations;
+    boolean zeroflag = true;
+    
     /**
      * Creates new form gui
      */
@@ -112,6 +116,11 @@ public class gui extends javax.swing.JFrame {
                 farba(evt);
             }
         });
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
 
         seven.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         seven.setText("7");
@@ -166,6 +175,11 @@ public class gui extends javax.swing.JFrame {
         sub.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
+            }
+        });
+        sub.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subActionPerformed(evt);
             }
         });
 
@@ -224,6 +238,11 @@ public class gui extends javax.swing.JFrame {
                 farba(evt);
             }
         });
+        mul.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mulActionPerformed(evt);
+            }
+        });
 
         one.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         one.setText("1");
@@ -280,6 +299,11 @@ public class gui extends javax.swing.JFrame {
                 farba(evt);
             }
         });
+        div.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divActionPerformed(evt);
+            }
+        });
 
         neg.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         neg.setText("+/-");
@@ -334,6 +358,11 @@ public class gui extends javax.swing.JFrame {
         eq.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
+            }
+        });
+        eq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                eqActionPerformed(evt);
             }
         });
 
@@ -439,56 +468,100 @@ public class gui extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-         // TODO add your handling code here:
+         jTextField2.setText("");
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + seven.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sevenActionPerformed
 
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + four.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + six.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + one.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + three.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + two.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_twoActionPerformed
 
     private void negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negActionPerformed
-        // TODO add your handling code here:
+        Double ops = Double.parseDouble(String.valueOf(jTextField2.getText()));
+        ops = ops * (-1);
+        jTextField2.setText(String.valueOf(ops));
+        
     }//GEN-LAST:event_negActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + zero.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_zeroActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
-        // TODO add your handling code here:
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("0");
+            zeroflag = false;
+        }
+        String Writenum = jTextField2.getText() + point.getText();
+        jTextField2.setText(Writenum);
     }//GEN-LAST:event_pointActionPerformed
 
     private void farba(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_farba
@@ -500,19 +573,84 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factorialfarba
 
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
-         String Writenum = jTextField2.getText() + nine.getText();
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
+        String Writenum = jTextField2.getText() + nine.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_nineActionPerformed
 
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + eight.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_eightActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
+        Double check = Double.parseDouble(jTextField2.getText());
+        if (check == 0 && zeroflag == true){
+            jTextField2.setText("");
+            zeroflag = false;
+        }
         String Writenum = jTextField2.getText() + five.getText();
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fiveActionPerformed
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        numfirst = Double.parseDouble(jTextField2.getText());
+        jTextField2.setText("");
+        operations="+"; 
+    }//GEN-LAST:event_addActionPerformed
+
+    private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
+        numfirst = Double.parseDouble(jTextField2.getText());
+        jTextField2.setText("");
+        operations="-"; 
+    }//GEN-LAST:event_subActionPerformed
+
+    private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
+        numfirst = Double.parseDouble(jTextField2.getText());
+        jTextField2.setText("");
+        operations="*"; 
+    }//GEN-LAST:event_mulActionPerformed
+
+    private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        numfirst = Double.parseDouble(jTextField2.getText());
+        jTextField2.setText("");
+        operations="/"; 
+    }//GEN-LAST:event_divActionPerformed
+
+    private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
+        String ans;
+        numsecond = Double.parseDouble(jTextField2.getText());
+        
+        if (operations == "+"){
+            result = numfirst + numsecond;
+            ans = String.format("%.0f", result);
+            jTextField2.setText(ans);
+        }
+        else if (operations == "-"){
+            result = numfirst - numsecond;
+            ans = String.format("%.0f", result);
+            jTextField2.setText(ans);
+        }
+        else if (operations == "*"){
+            result = numfirst * numsecond;
+            ans = String.format("%.0f", result);
+            jTextField2.setText(ans);
+        }
+        else if (operations == "/"){
+            result = numfirst / numsecond;
+            ans = String.format("%.0f", result);
+            jTextField2.setText(ans);
+        }
+    }//GEN-LAST:event_eqActionPerformed
 
     /**
      * @param args the command line arguments
