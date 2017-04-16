@@ -6,6 +6,7 @@
 package cal_cool_ator;
 
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import static java.lang.Boolean.TRUE;
 /**
@@ -624,7 +625,6 @@ public class gui extends javax.swing.JFrame {
         operations="/"; 
     }//GEN-LAST:event_divActionPerformed
 
-    
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
         String ans;
         numsecond = Double.parseDouble(jTextField2.getText());
@@ -672,15 +672,17 @@ public class gui extends javax.swing.JFrame {
         jTextField2.setText(ans);
     }//GEN-LAST:event_rootActionPerformed
 
-
-<<<<<<< HEAD
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
-                    // TODO add your handling code here:
+          char letter = evt.getKeyChar();
+          if (jTextField2.getText().equals("0 ")){
+            jTextField2.setText("");
+          }   
+          if (!(Character.isDigit(letter) || letter==KeyEvent.VK_BACK_SPACE || letter==KeyEvent.VK_DELETE)){
+              getToolkit().beep();
+              evt.consume();
+          }
     }//GEN-LAST:event_jTextField2KeyTyped
 
-=======
-    
->>>>>>> b6308d8c315b5a17b91a2b41ebe13c00d6aad7b0
     /**
      * @param args the command line arguments
      */
