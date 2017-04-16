@@ -74,6 +74,11 @@ public class gui extends javax.swing.JFrame {
                 jTextField2ActionPerformed(evt);
             }
         });
+        jTextField2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField2KeyTyped(evt);
+            }
+        });
 
         clear.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         clear.setText("C");
@@ -633,6 +638,10 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText(ans);
         }
     }//GEN-LAST:event_eqActionPerformed
+
+    private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
+                    // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2KeyTyped
 
     /**
      * @param args the command line arguments
