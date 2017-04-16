@@ -8,10 +8,11 @@ package cal_cool_ator;
 import java.awt.Toolkit;
 import java.text.DecimalFormat;
 import static java.lang.Boolean.TRUE;
-
 /**
  *
  * @author Matúš Švancár
+ *         Marek Šalgovič
+ *         Kuba Šimurda
  */
 public class gui extends javax.swing.JFrame {
 
@@ -19,7 +20,8 @@ public class gui extends javax.swing.JFrame {
     double numsecond;
     double result;
     String operations;
-    boolean zeroflag = true;    
+    boolean zeroflag = true;   
+    DecimalFormat f = new DecimalFormat("0.##########");
     
     /**
      * Creates new form gui
@@ -28,7 +30,7 @@ public class gui extends javax.swing.JFrame {
         initComponents();
         setIcon();
     }
-
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -97,6 +99,11 @@ public class gui extends javax.swing.JFrame {
         root.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
+            }
+        });
+        root.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rootActionPerformed(evt);
             }
         });
 
@@ -378,6 +385,11 @@ public class gui extends javax.swing.JFrame {
                 factorialfarba(evt);
             }
         });
+        factorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                factActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -607,33 +619,56 @@ public class gui extends javax.swing.JFrame {
         operations="/"; 
     }//GEN-LAST:event_divActionPerformed
 
+    
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
         String ans;
         numsecond = Double.parseDouble(jTextField2.getText());
         DecimalFormat f = new DecimalFormat("0.#########");
         
-        if (operations == "+"){
-            result = numfirst + numsecond;
-            ans = f.format(result);
-            jTextField2.setText(ans);
-        }
-        else if (operations == "-"){
-            result = numfirst - numsecond;
-            ans = f.format(result);
-            jTextField2.setText(ans);
-        }
-        else if (operations == "*"){
-            result = numfirst * numsecond;
-            ans = f.format(result);
-            jTextField2.setText(ans);
-        }
-        else if (operations == "/"){
-            result = numfirst / numsecond;
-            ans = f.format(result);
-            jTextField2.setText(ans);
-        }
-    }//GEN-LAST:event_eqActionPerformed
 
+        switch(operations){
+            case "+":
+                result = CalCoolAtor.add(numfirst,numsecond);
+                ans = String.format("%.0f", result);
+                jTextField2.setText(ans);
+                break;
+            case "-":
+                result = CalCoolAtor.sub(numfirst, numsecond);
+                ans = String.format("%.0f", result);
+                jTextField2.setText(ans);
+                break;
+            case "*":
+                result = CalCoolAtor.multiply(numfirst, numsecond);
+                ans = String.format("%.0f", result);
+                jTextField2.setText(ans);
+                break;
+            case "/":
+                result = CalCoolAtor.divide(numfirst, numsecond);
+                ans = String.format("%.0f", result);
+                jTextField2.setText(ans);
+                break;
+
+    }//GEN-LAST:event_eqActionPerformed
+    }
+    
+    private void factActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factActionPerformed
+        String ans;
+        numfirst = Integer.parseInt(jTextField2.getText());
+        long resultF = CalCoolAtor.factorial((int) numfirst);
+        ans = String.format("%d", resultF);   
+        jTextField2.setText(ans);
+    }//GEN-LAST:event_factActionPerformed
+
+    private void rootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootActionPerformed
+        String ans;
+        numfirst = Double.parseDouble(jTextField2.getText());
+        result = CalCoolAtor.root(numfirst);
+        ans = f.format(result);
+        jTextField2.setText(ans);
+    }//GEN-LAST:event_rootActionPerformed
+
+
+    
     /**
      * @param args the command line arguments
      */
