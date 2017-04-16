@@ -336,7 +336,7 @@ public class gui extends javax.swing.JFrame {
         });
 
         point.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        point.setText(",");
+        point.setText(".");
         point.setToolTipText("");
         point.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         point.setMargin(new java.awt.Insets(0, 0, 0, 0));
