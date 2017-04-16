@@ -623,7 +623,9 @@ public class gui extends javax.swing.JFrame {
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
         String ans;
         numsecond = Double.parseDouble(jTextField2.getText());
+        DecimalFormat f = new DecimalFormat("0.#########");
         
+
         switch(operations){
             case "+":
                 result = CalCoolAtor.add(numfirst,numsecond);
@@ -645,6 +647,7 @@ public class gui extends javax.swing.JFrame {
                 ans = String.format("%.0f", result);
                 jTextField2.setText(ans);
                 break;
+
     }//GEN-LAST:event_eqActionPerformed
     }
     
