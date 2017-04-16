@@ -5,6 +5,7 @@
  */
 package cal_cool_ator;
 
+import com.sun.prism.paint.Color;
 import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
@@ -42,6 +43,7 @@ public class gui extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
         jTextField2 = new javax.swing.JTextField();
         clear = new javax.swing.JButton();
         root = new javax.swing.JButton();
@@ -67,11 +69,24 @@ public class gui extends javax.swing.JFrame {
 
         jTextField1.setText("jTextField1");
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Open Sans", 0, 48)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(30, 30, 30));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setText("0 ");
+        jTextField2.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -83,10 +98,17 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        clear.setBackground(java.awt.Color.white);
         clear.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        clear.setText("C");
-        clear.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        clear.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numc.jpg"))); // NOI18N
+        clear.setActionCommand("c");
+        clear.setBorder(null);
+        clear.setBorderPainted(false);
         clear.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        clear.setOpaque(false);
+        clear.setPreferredSize(new java.awt.Dimension(29, 59));
+        clear.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numc-hover.jpg"))); // NOI18N
+        clear.setVerifyInputWhenFocusTarget(false);
         clear.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -98,10 +120,14 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        root.setBackground(java.awt.Color.white);
         root.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        root.setText("sqrt");
-        root.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        root.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numsqrt.png"))); // NOI18N
+        root.setToolTipText("");
+        root.setBorder(null);
+        root.setBorderPainted(false);
         root.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        root.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numsqrt-hover.png"))); // NOI18N
         root.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -113,10 +139,14 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        power.setBackground(new java.awt.Color(255, 255, 255));
         power.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        power.setText("^");
-        power.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        power.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numxn.png"))); // NOI18N
+        power.setToolTipText("");
+        power.setBorder(null);
+        power.setBorderPainted(false);
         power.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        power.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numxn-hover.png"))); // NOI18N
         power.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -128,10 +158,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        add.setBackground(java.awt.Color.white);
         add.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        add.setText("+");
-        add.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+.png"))); // NOI18N
+        add.setBorder(null);
+        add.setBorderPainted(false);
         add.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        add.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+-hover.png"))); // NOI18N
         add.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -143,10 +176,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        seven.setBackground(java.awt.Color.white);
         seven.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        seven.setText("7");
-        seven.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        seven.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num7.jpg"))); // NOI18N
+        seven.setBorder(null);
+        seven.setBorderPainted(false);
         seven.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        seven.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num7-hover.jpg"))); // NOI18N
         seven.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -158,11 +194,15 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        eight.setBackground(java.awt.Color.white);
         eight.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        eight.setText("8");
+        eight.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num8.jpg"))); // NOI18N
         eight.setToolTipText("");
-        eight.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        eight.setBorder(null);
+        eight.setBorderPainted(false);
         eight.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        eight.setPreferredSize(new java.awt.Dimension(150, 130));
+        eight.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num8-hover.jpg"))); // NOI18N
         eight.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -174,10 +214,15 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        nine.setBackground(java.awt.Color.white);
         nine.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        nine.setText("9");
-        nine.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        nine.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num9.jpg"))); // NOI18N
+        nine.setToolTipText("");
+        nine.setActionCommand("9");
+        nine.setBorder(null);
+        nine.setBorderPainted(false);
         nine.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        nine.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num9-hover.jpg"))); // NOI18N
         nine.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -189,10 +234,14 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        sub.setBackground(java.awt.Color.white);
         sub.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        sub.setText("-");
-        sub.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        sub.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num-.png"))); // NOI18N
+        sub.setToolTipText("");
+        sub.setBorder(null);
+        sub.setBorderPainted(false);
         sub.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        sub.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num--hover.png"))); // NOI18N
         sub.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -204,10 +253,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        four.setBackground(java.awt.Color.white);
         four.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        four.setText("4");
-        four.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        four.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num4.jpg"))); // NOI18N
+        four.setBorder(null);
+        four.setBorderPainted(false);
         four.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        four.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num4-hover.jpg"))); // NOI18N
         four.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -219,10 +271,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        five.setBackground(java.awt.Color.white);
         five.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        five.setText("5");
-        five.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        five.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num5.jpg"))); // NOI18N
+        five.setBorder(null);
+        five.setBorderPainted(false);
         five.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        five.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num5-hover.jpg"))); // NOI18N
         five.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -234,10 +289,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        six.setBackground(java.awt.Color.white);
         six.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        six.setText("6");
-        six.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        six.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num6.jpg"))); // NOI18N
+        six.setBorder(null);
+        six.setBorderPainted(false);
         six.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        six.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num6-hover.jpg"))); // NOI18N
         six.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -249,11 +307,14 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        mul.setBackground(java.awt.Color.white);
         mul.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        mul.setText("x");
+        mul.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numx.png"))); // NOI18N
         mul.setToolTipText("");
-        mul.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        mul.setBorder(null);
+        mul.setBorderPainted(false);
         mul.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        mul.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numx-hover.png"))); // NOI18N
         mul.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -265,12 +326,18 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        one.setBackground(java.awt.Color.white);
         one.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        one.setText("1");
+        one.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num1.jpg"))); // NOI18N
         one.setToolTipText("");
-        one.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        one.setBorder(null);
+        one.setBorderPainted(false);
         one.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        one.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num1-hover.jpg"))); // NOI18N
         one.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                oneMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
             }
@@ -281,10 +348,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        two.setBackground(java.awt.Color.white);
         two.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        two.setText("2");
-        two.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        two.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num2.jpg"))); // NOI18N
+        two.setBorder(null);
+        two.setBorderPainted(false);
         two.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        two.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num2-hover.jpg"))); // NOI18N
         two.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -296,10 +366,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        three.setBackground(java.awt.Color.white);
         three.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        three.setText("3");
-        three.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        three.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num3.jpg"))); // NOI18N
+        three.setBorder(null);
+        three.setBorderPainted(false);
         three.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        three.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num3-hover.jpg"))); // NOI18N
         three.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -311,10 +384,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        div.setBackground(java.awt.Color.white);
         div.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        div.setText("÷");
-        div.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        div.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numdiv.png"))); // NOI18N
+        div.setBorder(null);
+        div.setBorderPainted(false);
         div.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        div.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numdiv-hover.png"))); // NOI18N
         div.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -326,10 +402,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        neg.setBackground(java.awt.Color.white);
         neg.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        neg.setText("+/-");
-        neg.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        neg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+-.png"))); // NOI18N
+        neg.setBorder(null);
+        neg.setBorderPainted(false);
         neg.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        neg.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+--hover.png"))); // NOI18N
         neg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -341,10 +420,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        zero.setBackground(java.awt.Color.white);
         zero.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        zero.setText("0");
-        zero.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        zero.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num0.jpg"))); // NOI18N
+        zero.setBorder(null);
+        zero.setBorderPainted(false);
         zero.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        zero.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num0-hover.jpg"))); // NOI18N
         zero.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -356,11 +438,14 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        point.setBackground(java.awt.Color.white);
         point.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        point.setText(".");
+        point.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numpoint.png"))); // NOI18N
         point.setToolTipText("");
-        point.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        point.setBorder(null);
+        point.setBorderPainted(false);
         point.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        point.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numpoint-hover.png"))); // NOI18N
         point.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -372,10 +457,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        eq.setBackground(java.awt.Color.white);
         eq.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        eq.setText("=");
-        eq.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        eq.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num=.png"))); // NOI18N
+        eq.setBorder(null);
+        eq.setBorderPainted(false);
         eq.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        eq.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num=-hover.png"))); // NOI18N
         eq.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 farba(evt);
@@ -387,10 +475,13 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        factorial.setBackground(java.awt.Color.white);
         factorial.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
-        factorial.setText("!");
-        factorial.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        factorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numfact.png"))); // NOI18N
+        factorial.setBorder(null);
+        factorial.setBorderPainted(false);
         factorial.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        factorial.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numfact-hover.png"))); // NOI18N
         factorial.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 factorialfarba(evt);
@@ -408,7 +499,8 @@ public class gui extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jTextField2)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(eq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(four, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -419,31 +511,32 @@ public class gui extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(root, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(eight, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(nine, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(power, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, 0)
+                                        .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, 0)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nine, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(five, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(six, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(two, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, 0)
-                                .addComponent(three, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(mul, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, 0)
-                                .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, 0)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(mul, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sub, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(div, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(clear, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(eq, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -507,7 +600,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + seven.getText();
+        String Writenum = jTextField2.getText() + "7";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sevenActionPerformed
     
@@ -515,7 +608,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + four.getText();
+        String Writenum = jTextField2.getText() + "4";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fourActionPerformed
 
@@ -523,7 +616,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + six.getText();
+        String Writenum = jTextField2.getText() + "6";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sixActionPerformed
 
@@ -531,7 +624,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + one.getText();
+        String Writenum = jTextField2.getText() + "1";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_oneActionPerformed
 
@@ -539,7 +632,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + three.getText();
+        String Writenum = jTextField2.getText() + "3";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_threeActionPerformed
 
@@ -547,7 +640,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + two.getText();
+        String Writenum = jTextField2.getText() + "2";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_twoActionPerformed
 
@@ -562,7 +655,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + zero.getText();
+        String Writenum = jTextField2.getText() + "0";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_zeroActionPerformed
 
@@ -570,12 +663,12 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("0");
         }
-        String Writenum = jTextField2.getText() + point.getText();
+        String Writenum = jTextField2.getText() + ".";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_pointActionPerformed
 
     private void farba(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_farba
-      
+     
     }//GEN-LAST:event_farba
 
     private void factorialfarba(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_factorialfarba
@@ -586,7 +679,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + nine.getText();
+        String Writenum = jTextField2.getText() + "9";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_nineActionPerformed
 
@@ -594,7 +687,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + eight.getText();
+        String Writenum = jTextField2.getText() + "8";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_eightActionPerformed
 
@@ -602,7 +695,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0 ")){
             jTextField2.setText("");
         }
-        String Writenum = jTextField2.getText() + five.getText();
+        String Writenum = jTextField2.getText() + "5";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fiveActionPerformed
 
@@ -699,6 +792,10 @@ public class gui extends javax.swing.JFrame {
         operations="^";
     }//GEN-LAST:event_powerActionPerformed
 
+    private void oneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_oneMouseClicked
+          
+    }//GEN-LAST:event_oneMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -743,6 +840,7 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JButton factorial;
     private javax.swing.JButton five;
     private javax.swing.JButton four;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JButton mul;
