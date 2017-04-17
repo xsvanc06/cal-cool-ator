@@ -33,6 +33,7 @@ public class gui extends javax.swing.JFrame {
         setIcon();
         setResizable(false);
         setSize(600, 1000);
+        //jTextField2.requestFocus();
     }
     
     /**
@@ -139,6 +140,7 @@ public class gui extends javax.swing.JFrame {
         clear.setAlignmentY(0.0F);
         clear.setBorder(null);
         clear.setBorderPainted(false);
+        clear.setFocusable(false);
         clear.setMargin(new java.awt.Insets(0, 0, 0, 0));
         clear.setPreferredSize(new java.awt.Dimension(29, 59));
         clear.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numc-hover.jpg"))); // NOI18N
@@ -160,6 +162,7 @@ public class gui extends javax.swing.JFrame {
         root.setAlignmentY(0.0F);
         root.setBorder(null);
         root.setBorderPainted(false);
+        root.setFocusable(false);
         root.setMargin(new java.awt.Insets(0, 0, 0, 0));
         root.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numsqrt-hover.png"))); // NOI18N
         root.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -180,6 +183,7 @@ public class gui extends javax.swing.JFrame {
         power.setAlignmentY(0.0F);
         power.setBorder(null);
         power.setBorderPainted(false);
+        power.setFocusable(false);
         power.setMargin(new java.awt.Insets(0, 0, 0, 0));
         power.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numxn-hover.png"))); // NOI18N
         power.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -199,6 +203,7 @@ public class gui extends javax.swing.JFrame {
         add.setAlignmentY(0.0F);
         add.setBorder(null);
         add.setBorderPainted(false);
+        add.setFocusable(false);
         add.setMargin(new java.awt.Insets(0, 0, 0, 0));
         add.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+-hover.png"))); // NOI18N
         add.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -218,6 +223,7 @@ public class gui extends javax.swing.JFrame {
         seven.setAlignmentY(0.0F);
         seven.setBorder(null);
         seven.setBorderPainted(false);
+        seven.setFocusable(false);
         seven.setMargin(new java.awt.Insets(0, 0, 0, 0));
         seven.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num7-hover.jpg"))); // NOI18N
         seven.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -238,6 +244,7 @@ public class gui extends javax.swing.JFrame {
         eight.setAlignmentY(0.0F);
         eight.setBorder(null);
         eight.setBorderPainted(false);
+        eight.setFocusable(false);
         eight.setMargin(new java.awt.Insets(0, 0, 0, 0));
         eight.setPreferredSize(new java.awt.Dimension(150, 130));
         eight.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num8-hover.jpg"))); // NOI18N
@@ -260,6 +267,7 @@ public class gui extends javax.swing.JFrame {
         nine.setAlignmentY(0.0F);
         nine.setBorder(null);
         nine.setBorderPainted(false);
+        nine.setFocusable(false);
         nine.setMargin(new java.awt.Insets(0, 0, 0, 0));
         nine.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num9-hover.jpg"))); // NOI18N
         nine.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -280,6 +288,7 @@ public class gui extends javax.swing.JFrame {
         sub.setAlignmentY(0.0F);
         sub.setBorder(null);
         sub.setBorderPainted(false);
+        sub.setFocusable(false);
         sub.setMargin(new java.awt.Insets(0, 0, 0, 0));
         sub.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num--hover.png"))); // NOI18N
         sub.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -299,6 +308,7 @@ public class gui extends javax.swing.JFrame {
         four.setAlignmentY(0.0F);
         four.setBorder(null);
         four.setBorderPainted(false);
+        four.setFocusable(false);
         four.setMargin(new java.awt.Insets(0, 0, 0, 0));
         four.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num4-hover.jpg"))); // NOI18N
         four.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -318,6 +328,7 @@ public class gui extends javax.swing.JFrame {
         five.setAlignmentY(0.0F);
         five.setBorder(null);
         five.setBorderPainted(false);
+        five.setFocusable(false);
         five.setMargin(new java.awt.Insets(0, 0, 0, 0));
         five.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num5-hover.jpg"))); // NOI18N
         five.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -337,6 +348,7 @@ public class gui extends javax.swing.JFrame {
         six.setAlignmentY(0.0F);
         six.setBorder(null);
         six.setBorderPainted(false);
+        six.setFocusable(false);
         six.setMargin(new java.awt.Insets(0, 0, 0, 0));
         six.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num6-hover.jpg"))); // NOI18N
         six.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -357,6 +369,7 @@ public class gui extends javax.swing.JFrame {
         mul.setAlignmentY(0.0F);
         mul.setBorder(null);
         mul.setBorderPainted(false);
+        mul.setFocusable(false);
         mul.setMargin(new java.awt.Insets(0, 0, 0, 0));
         mul.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numx-hover.png"))); // NOI18N
         mul.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -377,6 +390,7 @@ public class gui extends javax.swing.JFrame {
         one.setAlignmentY(0.0F);
         one.setBorder(null);
         one.setBorderPainted(false);
+        one.setFocusable(false);
         one.setMargin(new java.awt.Insets(0, 0, 0, 0));
         one.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num1-hover.jpg"))); // NOI18N
         one.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -399,6 +413,7 @@ public class gui extends javax.swing.JFrame {
         two.setAlignmentY(0.0F);
         two.setBorder(null);
         two.setBorderPainted(false);
+        two.setFocusable(false);
         two.setMargin(new java.awt.Insets(0, 0, 0, 0));
         two.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num2-hover.jpg"))); // NOI18N
         two.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -418,6 +433,7 @@ public class gui extends javax.swing.JFrame {
         three.setAlignmentY(0.0F);
         three.setBorder(null);
         three.setBorderPainted(false);
+        three.setFocusable(false);
         three.setMargin(new java.awt.Insets(0, 0, 0, 0));
         three.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num3-hover.jpg"))); // NOI18N
         three.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -437,6 +453,7 @@ public class gui extends javax.swing.JFrame {
         div.setAlignmentY(0.0F);
         div.setBorder(null);
         div.setBorderPainted(false);
+        div.setFocusable(false);
         div.setMargin(new java.awt.Insets(0, 0, 0, 0));
         div.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numdiv-hover.png"))); // NOI18N
         div.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -456,6 +473,7 @@ public class gui extends javax.swing.JFrame {
         neg.setAlignmentY(0.0F);
         neg.setBorder(null);
         neg.setBorderPainted(false);
+        neg.setFocusable(false);
         neg.setMargin(new java.awt.Insets(0, 0, 0, 0));
         neg.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num+--hover.png"))); // NOI18N
         neg.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -475,6 +493,7 @@ public class gui extends javax.swing.JFrame {
         zero.setAlignmentY(0.0F);
         zero.setBorder(null);
         zero.setBorderPainted(false);
+        zero.setFocusable(false);
         zero.setMargin(new java.awt.Insets(0, 0, 0, 0));
         zero.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num0-hover.jpg"))); // NOI18N
         zero.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -495,6 +514,7 @@ public class gui extends javax.swing.JFrame {
         point.setAlignmentY(0.0F);
         point.setBorder(null);
         point.setBorderPainted(false);
+        point.setFocusable(false);
         point.setMargin(new java.awt.Insets(0, 0, 0, 0));
         point.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numpoint-hover.png"))); // NOI18N
         point.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -514,6 +534,7 @@ public class gui extends javax.swing.JFrame {
         eq.setAlignmentY(0.0F);
         eq.setBorder(null);
         eq.setBorderPainted(false);
+        eq.setFocusable(false);
         eq.setMargin(new java.awt.Insets(0, 0, 0, 0));
         eq.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/num=-hover.png"))); // NOI18N
         eq.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -533,6 +554,7 @@ public class gui extends javax.swing.JFrame {
         factorial.setAlignmentY(0.0F);
         factorial.setBorder(null);
         factorial.setBorderPainted(false);
+        factorial.setFocusable(false);
         factorial.setMargin(new java.awt.Insets(0, 0, 0, 0));
         factorial.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/cal_cool_ator/images/numfact-hover.png"))); // NOI18N
         factorial.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -644,11 +666,11 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-         jTextField2.setText("");
+         jTextField2.setText("0");
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "7";
@@ -656,7 +678,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_sevenActionPerformed
     
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "4";
@@ -664,7 +686,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "6";
@@ -672,7 +694,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "1";
@@ -680,7 +702,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "3";
@@ -688,7 +710,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "2";
@@ -696,26 +718,30 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_twoActionPerformed
 
     private void negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negActionPerformed
+        if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         Double ops = Double.parseDouble(String.valueOf(jTextField2.getText()));
-        ops = ops * (-1);
+       if(ops!=0){ ops = ops * (-1);
         jTextField2.setText(String.valueOf(ops));
-        
+       }
     }//GEN-LAST:event_negActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
+        if (!jTextField2.getText().equals("0")){
         String Writenum = jTextField2.getText() + "0";
-        jTextField2.setText(Writenum);
+        jTextField2.setText(Writenum);}
     }//GEN-LAST:event_zeroActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("")){
             jTextField2.setText("0");
         }
+        if(jTextField2.getText().indexOf('.')<0){
         String Writenum = jTextField2.getText() + ".";
-        jTextField2.setText(Writenum);
+        jTextField2.setText(Writenum);}
     }//GEN-LAST:event_pointActionPerformed
 
     private void farba(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_farba
@@ -727,7 +753,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factorialfarba
 
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "9";
@@ -735,7 +761,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_nineActionPerformed
 
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "8";
@@ -743,7 +769,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_eightActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
-        if (jTextField2.getText().equals("0 ")){
+        if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
         }
         String Writenum = jTextField2.getText() + "5";
@@ -751,30 +777,40 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_fiveActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+         if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="+"; 
     }//GEN-LAST:event_addActionPerformed
 
     private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
+         if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="-"; 
     }//GEN-LAST:event_subActionPerformed
 
     private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
+         if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="*"; 
     }//GEN-LAST:event_mulActionPerformed
 
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+         if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="/"; 
     }//GEN-LAST:event_divActionPerformed
 
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
+         if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         String ans;
         numsecond = Double.parseDouble(jTextField2.getText());
         DecimalFormat f = new DecimalFormat("0.#########");
@@ -828,7 +864,7 @@ public class gui extends javax.swing.JFrame {
 
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
           char letter = evt.getKeyChar();
-          if (jTextField2.getText().equals("0 ")){
+          if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
           }   
           if (!(Character.isDigit(letter) || letter==KeyEvent.VK_BACK_SPACE || letter==KeyEvent.VK_DELETE)){

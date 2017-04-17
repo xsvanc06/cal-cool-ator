@@ -238,6 +238,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -270,6 +271,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -299,6 +301,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -327,6 +330,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -355,6 +359,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -384,6 +389,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -417,6 +423,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -446,6 +453,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -474,6 +482,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -502,6 +511,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -530,6 +540,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -559,6 +570,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -588,6 +600,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -617,6 +630,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -645,6 +659,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -673,6 +688,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -701,6 +717,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -729,6 +746,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -758,6 +776,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -786,6 +805,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
@@ -814,6 +834,7 @@
           <Border info="null"/>
         </Property>
         <Property name="borderPainted" type="boolean" value="false"/>
+        <Property name="focusable" type="boolean" value="false"/>
         <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
           <Insets value="[0, 0, 0, 0]"/>
         </Property>
