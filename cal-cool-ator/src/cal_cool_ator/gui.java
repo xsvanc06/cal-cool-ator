@@ -20,14 +20,26 @@ public class gui extends javax.swing.JFrame {
 
     double numfirst;
     double numsecond;
-    double result;
-    String operations;
+    double result = 0;
+    String operations= "0";
     boolean zeroflag = true;   
     DecimalFormat f = new DecimalFormat("0.##########");
     
     /**
      * Creates new form gui
      */
+    public void cisti(){
+        if (jTextField2.getText().equals("0")){
+            jTextField2.setText("");}
+        if(result!=0){jTextField2.setText("");result=0;}
+    }
+    public static String fmt(double f)
+{
+    if(f == (long) f)
+        return String.format("%d",(long)f);
+    else
+        return String.format("%.14s",f);
+}
     public gui() {
         initComponents();
         setIcon();
@@ -113,7 +125,7 @@ public class gui extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField2.setFont(new java.awt.Font("Open Sans", 0, 48)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Open Sans", 0, 70)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(30, 30, 30));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setText("0");
@@ -670,49 +682,37 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+    cisti();
         String Writenum = jTextField2.getText() + "7";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sevenActionPerformed
     
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        cisti();
         String Writenum = jTextField2.getText() + "4";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        cisti();
         String Writenum = jTextField2.getText() + "6";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        cisti();
         String Writenum = jTextField2.getText() + "1";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+       cisti();
         String Writenum = jTextField2.getText() + "3";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        cisti();
         String Writenum = jTextField2.getText() + "2";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_twoActionPerformed
@@ -727,9 +727,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_negActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        if(result!=0){jTextField2.setText("");}
         if (!jTextField2.getText().equals("0")){
         String Writenum = jTextField2.getText() + "0";
         jTextField2.setText(Writenum);}
@@ -753,25 +751,19 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factorialfarba
 
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        cisti();
         String Writenum = jTextField2.getText() + "9";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_nineActionPerformed
 
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        cisti();
         String Writenum = jTextField2.getText() + "8";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_eightActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
-        if (jTextField2.getText().equals("0")){
-            jTextField2.setText("");
-        }
+        cisti();
         String Writenum = jTextField2.getText() + "5";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fiveActionPerformed
@@ -813,35 +805,40 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         String ans;
         numsecond = Double.parseDouble(jTextField2.getText());
-        DecimalFormat f = new DecimalFormat("0.#########");
+        //DecimalFormat f = new DecimalFormat("0.#########");
         
 
         switch(operations){
             case "+":
                 result = CalCoolAtor.add(numfirst,numsecond);
-                ans = f.format(result);
+                ans = fmt(result);
                 jTextField2.setText(ans);
                 break;
             case "-":
                 result = CalCoolAtor.sub(numfirst, numsecond);
-                ans = f.format(result);
+                 ans = fmt(result);
                 jTextField2.setText(ans);
                 break;
             case "*":
                 result = CalCoolAtor.multiply(numfirst, numsecond);
-                ans = f.format(result);
+                 ans = fmt(result);
                 jTextField2.setText(ans);
                 break;
             case "/":
                 result = CalCoolAtor.divide(numfirst, numsecond);
-                ans = f.format(result);
+                ans = fmt(result);
                 jTextField2.setText(ans);
                 break;
             case "^":
                 result = CalCoolAtor.power(numfirst, numsecond);
-                ans = f.format(result);
+                 ans = fmt(result);
                 jTextField2.setText(ans);
-                break;    
+                break; 
+            case "0":
+                result = Double.parseDouble(String.valueOf(jTextField2.getText()));
+                ans = fmt(result);
+                jTextField2.setText(ans);
+                break; 
 
     }//GEN-LAST:event_eqActionPerformed
     }
@@ -858,7 +855,7 @@ public class gui extends javax.swing.JFrame {
         String ans;
         numfirst = Double.parseDouble(jTextField2.getText());
         result = CalCoolAtor.root(numfirst);
-        ans = f.format(result);
+        ans = fmt(result);
         jTextField2.setText(ans);
     }//GEN-LAST:event_rootActionPerformed
 
