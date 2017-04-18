@@ -813,31 +813,43 @@ public class gui extends javax.swing.JFrame {
                 result = CalCoolAtor.add(numfirst,numsecond);
                 ans = fmt(result);
                 jTextField2.setText(ans);
+                numfirst = 0;
+                numsecond = 0;
                 break;
             case "-":
                 result = CalCoolAtor.sub(numfirst, numsecond);
                  ans = fmt(result);
                 jTextField2.setText(ans);
+                numfirst = 0;
+                numsecond = 0;
                 break;
             case "*":
                 result = CalCoolAtor.multiply(numfirst, numsecond);
                  ans = fmt(result);
                 jTextField2.setText(ans);
+                numfirst = 0;
+                numsecond = 0;
                 break;
             case "/":
                 result = CalCoolAtor.divide(numfirst, numsecond);
                 ans = fmt(result);
                 jTextField2.setText(ans);
+                numfirst = 0;
+                numsecond = 0;
                 break;
             case "^":
                 result = CalCoolAtor.power(numfirst, numsecond);
                  ans = fmt(result);
                 jTextField2.setText(ans);
+                numfirst = 0;
+                numsecond = 0;
                 break; 
             case "0":
                 result = Double.parseDouble(String.valueOf(jTextField2.getText()));
                 ans = fmt(result);
                 jTextField2.setText(ans);
+                numfirst = 0;
+                numsecond = 0;
                 break; 
 
     }//GEN-LAST:event_eqActionPerformed
