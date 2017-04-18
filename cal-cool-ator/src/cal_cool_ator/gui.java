@@ -133,6 +133,7 @@ public class gui extends javax.swing.JFrame {
         jTextField2.setAlignmentY(0.0F);
         jTextField2.setAutoscrolls(false);
         jTextField2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField2.setSelectedTextColor(new java.awt.Color(26, 136, 197));
         jTextField2.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -679,6 +680,10 @@ public class gui extends javax.swing.JFrame {
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
          jTextField2.setText("0");
+         numfirst = 0;
+         numsecond = 0;
+         operations = "0";
+         
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
@@ -804,7 +809,8 @@ public class gui extends javax.swing.JFrame {
          if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         String ans;
-        numsecond = Double.parseDouble(jTextField2.getText());
+        if(numsecond==0)
+                numsecond = Double.parseDouble(jTextField2.getText());
         //DecimalFormat f = new DecimalFormat("0.#########");
         
 
@@ -813,43 +819,42 @@ public class gui extends javax.swing.JFrame {
                 result = CalCoolAtor.add(numfirst,numsecond);
                 ans = fmt(result);
                 jTextField2.setText(ans);
-                numfirst = 0;
-                numsecond = 0;
+                numfirst = result;
                 break;
             case "-":
                 result = CalCoolAtor.sub(numfirst, numsecond);
                  ans = fmt(result);
                 jTextField2.setText(ans);
-                numfirst = 0;
-                numsecond = 0;
+                numfirst = result;
+                
                 break;
             case "*":
                 result = CalCoolAtor.multiply(numfirst, numsecond);
                  ans = fmt(result);
                 jTextField2.setText(ans);
-                numfirst = 0;
-                numsecond = 0;
+               numfirst = result;
+                
                 break;
             case "/":
                 result = CalCoolAtor.divide(numfirst, numsecond);
                 ans = fmt(result);
                 jTextField2.setText(ans);
-                numfirst = 0;
-                numsecond = 0;
+                numfirst = result;
+                
                 break;
             case "^":
                 result = CalCoolAtor.power(numfirst, numsecond);
                  ans = fmt(result);
                 jTextField2.setText(ans);
-                numfirst = 0;
-                numsecond = 0;
+               numfirst = result;
+                
                 break; 
             case "0":
                 result = Double.parseDouble(String.valueOf(jTextField2.getText()));
                 ans = fmt(result);
                 jTextField2.setText(ans);
-                numfirst = 0;
-                numsecond = 0;
+               
+                
                 break; 
 
     }//GEN-LAST:event_eqActionPerformed
