@@ -818,54 +818,46 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_fiveActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        if(!operations.equals("+")){
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-      //  jTextField2.setText("");
         operations="+"; 
         result = 0;
-        numsecond = 0;}
+        numsecond = 0;
         OPflag = true;
     }//GEN-LAST:event_addActionPerformed
 
     private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
-        if(!operations.equals("-")){ 
-        if (jTextField2.getText().equals("")){
+         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        //jTextField2.setText("");
         operations="-"; 
         result=0;
         numsecond = 0;
         OPflag = true;
     }//GEN-LAST:event_subActionPerformed
-    }
+
     private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
-        if(!operations.equals("*")){ 
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        //jTextField2.setText("");
         operations="*";
         result = 0;
         numsecond = 0;
         OPflag = true;
     }//GEN-LAST:event_mulActionPerformed
-    }
+
     
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
-    if(!operations.equals("/")){
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        //jTextField2.setText("");
         operations="/";
         result = 0;
         numsecond = 0 ;
         OPflag = true;
     }//GEN-LAST:event_divActionPerformed
-    }
+    
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
          if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
