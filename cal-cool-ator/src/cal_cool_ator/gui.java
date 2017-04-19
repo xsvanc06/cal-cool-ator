@@ -24,7 +24,8 @@ public class gui extends javax.swing.JFrame {
     long resultF = 0;
     String nega;
     String operations= "0";
-    boolean zeroflag = true;   
+    boolean zeroflag = true;
+    boolean OPflag = false;
     DecimalFormat f = new DecimalFormat("0.##########");
     
     /**
@@ -36,6 +37,15 @@ public class gui extends javax.swing.JFrame {
         if(result!=0){jTextField2.setText("");result=0;}
         if(resultF!=0){jTextField2.setText("");resultF=0;}
     }
+    
+    public void zmenaoperacie(){
+        if(OPflag==true){
+            jTextField2.setText("");
+            OPflag=false;
+        } 
+    }
+    
+    
     public static String fmt(double f)
 {
     if(f == (long) f)
@@ -710,36 +720,42 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
-    cisti();
+        zmenaoperacie();
+        cisti();
         String Writenum = jTextField2.getText() + "7";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sevenActionPerformed
     
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
+        zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "4";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
+        zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "6";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
+        zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "1";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
-       cisti();
+        zmenaoperacie();
+        cisti();
         String Writenum = jTextField2.getText() + "3";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
+        zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "2";
         jTextField2.setText(Writenum);
@@ -756,6 +772,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_negActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
+        zmenaoperacie();
         if(result!=0){jTextField2.setText("");}
         if (!jTextField2.getText().equals("0")){
         String Writenum = jTextField2.getText() + "0";
@@ -780,64 +797,75 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factorialfarba
 
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
+        zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "9";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_nineActionPerformed
 
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
+        zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "8";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_eightActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
+        zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "5";
         jTextField2.setText(Writenum);
     }//GEN-LAST:event_fiveActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-        
+        if(!operations.equals("+")){
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        jTextField2.setText("");
+      //  jTextField2.setText("");
         operations="+"; 
         result = 0;
-        numsecond = 0;
+        numsecond = 0;}
+        OPflag = true;
     }//GEN-LAST:event_addActionPerformed
 
     private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
-         if (jTextField2.getText().equals("")){
+        if(!operations.equals("-")){ 
+        if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        jTextField2.setText("");
+        //jTextField2.setText("");
         operations="-"; 
         result=0;
         numsecond = 0;
+        OPflag = true;
     }//GEN-LAST:event_subActionPerformed
-
+    }
     private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
-         if (jTextField2.getText().equals("")){
+        if(!operations.equals("*")){ 
+        if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        jTextField2.setText("");
+        //jTextField2.setText("");
         operations="*";
         result = 0;
         numsecond = 0;
+        OPflag = true;
     }//GEN-LAST:event_mulActionPerformed
-
+    }
+    
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
-         if (jTextField2.getText().equals("")){
+    if(!operations.equals("/")){
+        if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        jTextField2.setText("");
+        //jTextField2.setText("");
         operations="/";
         result = 0;
         numsecond = 0 ;
+        OPflag = true;
     }//GEN-LAST:event_divActionPerformed
-
+    }
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
          if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
@@ -879,7 +907,7 @@ public class gui extends javax.swing.JFrame {
                 result = CalCoolAtor.power(numfirst, numsecond);
                  ans = fmt(result);
                 jTextField2.setText(ans);
-               numfirst = result;
+                numfirst = result;
                 
                 break; 
             case "0":
