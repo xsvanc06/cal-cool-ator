@@ -44,6 +44,11 @@ public class gui extends javax.swing.JFrame {
             OPflag=false;
         } 
     }
+    public void rozmery()
+    { if(jTextField2.getText().length()>=15) {  
+   jTextField2.setText(jTextField2.getText().substring(0, jTextField2.getText().length() - 1));
+ }
+    }
     
     
     public static String fmt(double f)
@@ -57,7 +62,7 @@ public class gui extends javax.swing.JFrame {
         initComponents();
         setIcon();
         setResizable(false);
-        setSize(606, 1060);
+        setSize(606, 1000);
         //jTextField2.requestFocus();
     }
     
@@ -139,15 +144,16 @@ public class gui extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField2.setFont(new java.awt.Font("Open Sans", 0, 70)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Open Sans", 0, 67)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(30, 30, 30));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setText("0");
         jTextField2.setAlignmentX(0.0F);
         jTextField2.setAlignmentY(0.0F);
         jTextField2.setAutoscrolls(false);
-        jTextField2.setBorder(null);
+        jTextField2.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         jTextField2.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField2.setPreferredSize(new java.awt.Dimension(550, 89));
         jTextField2.setSelectedTextColor(new java.awt.Color(26, 136, 197));
         jTextField2.setSelectionColor(new java.awt.Color(255, 255, 255));
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -597,13 +603,17 @@ public class gui extends javax.swing.JFrame {
         });
 
         jTextField3.setEditable(false);
-        jTextField3.setBackground(new java.awt.Color(248, 248, 248));
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField3.setText("500 +");
+        jTextField3.setBackground(new java.awt.Color(250, 250, 250));
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setToolTipText("");
-        jTextField3.setBorder(null);
+        jTextField3.setAlignmentX(0.0F);
+        jTextField3.setAlignmentY(0.0F);
+        jTextField3.setAutoscrolls(false);
+        jTextField3.setBorder(javax.swing.BorderFactory.createEmptyBorder());
         jTextField3.setFocusable(false);
+        jTextField3.setMargin(new java.awt.Insets(0, 0, 0, 0));
+        jTextField3.setPreferredSize(new java.awt.Dimension(56, 58));
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -614,7 +624,6 @@ public class gui extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                 .addComponent(eq, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createSequentialGroup()
@@ -652,16 +661,17 @@ public class gui extends javax.swing.JFrame {
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, 0)
-                            .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(0, 0, 0)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -724,6 +734,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "7";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_sevenActionPerformed
     
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
@@ -731,6 +742,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "4";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
@@ -738,6 +750,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "6";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
@@ -745,6 +758,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "1";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
@@ -752,6 +766,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "3";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
@@ -759,6 +774,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "2";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_twoActionPerformed
 
     private void negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negActionPerformed
@@ -777,6 +793,7 @@ public class gui extends javax.swing.JFrame {
         if (!jTextField2.getText().equals("0")){
         String Writenum = jTextField2.getText() + "0";
         jTextField2.setText(Writenum);}
+        rozmery();
     }//GEN-LAST:event_zeroActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
@@ -801,6 +818,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "9";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_nineActionPerformed
 
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
@@ -808,6 +826,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "8";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_eightActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
@@ -815,6 +834,7 @@ public class gui extends javax.swing.JFrame {
         cisti();
         String Writenum = jTextField2.getText() + "5";
         jTextField2.setText(Writenum);
+        rozmery();
     }//GEN-LAST:event_fiveActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
@@ -822,6 +842,7 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         operations="+"; 
+        jTextField3.setText("+");
         result = 0;
         numsecond = 0;
         OPflag = true;
@@ -832,6 +853,7 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         operations="-"; 
+        jTextField3.setText("−");
         result=0;
         numsecond = 0;
         OPflag = true;
@@ -842,6 +864,7 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         operations="*";
+        jTextField3.setText("x");
         result = 0;
         numsecond = 0;
         OPflag = true;
@@ -853,6 +876,7 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         operations="/";
+        jTextField3.setText("÷");
         result = 0;
         numsecond = 0 ;
         OPflag = true;
@@ -862,6 +886,7 @@ public class gui extends javax.swing.JFrame {
          if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         String ans;
+        jTextField3.setText("");
         if(numsecond==0)
                 numsecond = Double.parseDouble(jTextField2.getText());
         //DecimalFormat f = new DecimalFormat("0.#########");
@@ -937,7 +962,11 @@ public class gui extends javax.swing.JFrame {
           if (!(Character.isDigit(letter) || letter==KeyEvent.VK_BACK_SPACE || letter==KeyEvent.VK_DELETE)){
               getToolkit().beep();
               evt.consume();
+             
           }
+           if(jTextField2.getText().length()>=14) {  
+   evt.consume();
+ }
     }//GEN-LAST:event_jTextField2KeyTyped
 
     private void powerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerActionPerformed
@@ -946,6 +975,7 @@ public class gui extends javax.swing.JFrame {
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="^";
+        jTextField3.setText("^");
         result = 0;
         numsecond = 0;
         OPflag = true;
