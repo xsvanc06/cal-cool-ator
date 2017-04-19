@@ -897,7 +897,7 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "^":
                 result = CalCoolAtor.power(numfirst, numsecond);
-                 ans = fmt(result);
+                ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
                 
@@ -941,9 +941,14 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2KeyTyped
 
     private void powerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerActionPerformed
+        if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="^";
+        result = 0;
+        numsecond = 0;
+        OPflag = true;
     }//GEN-LAST:event_powerActionPerformed
 
     private void oneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_oneMouseClicked
