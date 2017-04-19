@@ -804,6 +804,8 @@ public class gui extends javax.swing.JFrame {
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="+"; 
+        result = 0;
+        numsecond = 0;
     }//GEN-LAST:event_addActionPerformed
 
     private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
@@ -812,6 +814,8 @@ public class gui extends javax.swing.JFrame {
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
         operations="-"; 
+        result=0;
+        numsecond = 0;
     }//GEN-LAST:event_subActionPerformed
 
     private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
@@ -819,7 +823,9 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
-        operations="*"; 
+        operations="*";
+        result = 0;
+        numsecond = 0;
     }//GEN-LAST:event_mulActionPerformed
 
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
@@ -827,7 +833,9 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
-        operations="/"; 
+        operations="/";
+        result = 0;
+        numsecond = 0 ;
     }//GEN-LAST:event_divActionPerformed
 
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
