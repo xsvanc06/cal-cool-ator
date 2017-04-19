@@ -21,6 +21,8 @@ public class gui extends javax.swing.JFrame {
     double numfirst;
     double numsecond;
     double result = 0;
+    long resultF = 0;
+    String nega;
     String operations= "0";
     boolean zeroflag = true;   
     DecimalFormat f = new DecimalFormat("0.##########");
@@ -32,6 +34,7 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("0")){
             jTextField2.setText("");}
         if(result!=0){jTextField2.setText("");result=0;}
+        if(resultF!=0){jTextField2.setText("");resultF=0;}
     }
     public static String fmt(double f)
 {
@@ -44,7 +47,7 @@ public class gui extends javax.swing.JFrame {
         initComponents();
         setIcon();
         setResizable(false);
-        setSize(600, 1000);
+        setSize(606, 1060);
         //jTextField2.requestFocus();
     }
     
@@ -83,6 +86,7 @@ public class gui extends javax.swing.JFrame {
         point = new javax.swing.JButton();
         eq = new javax.swing.JButton();
         factorial = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
 
         jTextField1.setText("jTextField1");
 
@@ -132,6 +136,7 @@ public class gui extends javax.swing.JFrame {
         jTextField2.setAlignmentX(0.0F);
         jTextField2.setAlignmentY(0.0F);
         jTextField2.setAutoscrolls(false);
+        jTextField2.setBorder(null);
         jTextField2.setMargin(new java.awt.Insets(0, 0, 0, 0));
         jTextField2.setSelectedTextColor(new java.awt.Color(26, 136, 197));
         jTextField2.setSelectionColor(new java.awt.Color(255, 255, 255));
@@ -581,6 +586,20 @@ public class gui extends javax.swing.JFrame {
             }
         });
 
+        jTextField3.setEditable(false);
+        jTextField3.setBackground(new java.awt.Color(248, 248, 248));
+        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField3.setText("500 +");
+        jTextField3.setToolTipText("");
+        jTextField3.setBorder(null);
+        jTextField3.setFocusable(false);
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -624,11 +643,15 @@ public class gui extends javax.swing.JFrame {
                             .addComponent(zero, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(0, 0, 0)
                             .addComponent(point, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 600, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                .addGap(0, 0, 0)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(power, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -727,7 +750,8 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("0");}
         Double ops = Double.parseDouble(String.valueOf(jTextField2.getText()));
        if(ops!=0){ ops = ops * (-1);
-        jTextField2.setText(String.valueOf(ops));
+       nega = fmt(ops);
+        jTextField2.setText(nega);
        }
     }//GEN-LAST:event_negActionPerformed
 
@@ -774,7 +798,8 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_fiveActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
-         if (jTextField2.getText().equals("")){
+        
+        if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         jTextField2.setText("");
@@ -863,7 +888,7 @@ public class gui extends javax.swing.JFrame {
     private void factActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factActionPerformed
         String ans;
         numfirst = Integer.parseInt(jTextField2.getText());
-        long resultF = CalCoolAtor.factorial((int) numfirst);
+        resultF = CalCoolAtor.factorial((int) numfirst);
         ans = String.format("%d", resultF);   
         jTextField2.setText(ans);
     }//GEN-LAST:event_factActionPerformed
@@ -896,6 +921,10 @@ public class gui extends javax.swing.JFrame {
     private void oneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_oneMouseClicked
           
     }//GEN-LAST:event_oneMouseClicked
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -946,6 +975,7 @@ public class gui extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
     private javax.swing.JButton mul;
     private javax.swing.JButton neg;
     private javax.swing.JButton nine;
