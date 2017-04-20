@@ -18,7 +18,7 @@ import java.util.Locale;
  *         Kuba Šimurda
  */
 public class gui extends javax.swing.JFrame {
-
+    boolean chyba = false;
     double numfirst;
     double numsecond;
     double result = 0;
@@ -39,6 +39,7 @@ public class gui extends javax.swing.JFrame {
             jTextField2.setText("");}
         if(result!=0){jTextField2.setText("");result=0;}
         if(resultF!=0){jTextField2.setText("");resultF=0;}
+        debug();
     }
     
     public void zmenaoperacie(){
@@ -52,8 +53,13 @@ public class gui extends javax.swing.JFrame {
    jTextField2.setText(jTextField2.getText().substring(0, jTextField2.getText().length() - 1));
  }
     }
-    
-    
+   public void debug()
+   {if(chyba==true)
+       jTextField2.setText("");
+       chyba=false;
+   }
+   
+   
     public static String fmt(double f)
 {
     if(f == (long) f)
@@ -784,6 +790,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_twoActionPerformed
 
     private void negActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_negActionPerformed
+        debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         Double ops = Double.parseDouble(String.valueOf(jTextField2.getText()));
@@ -803,6 +810,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_zeroActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
+        debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");
         }
@@ -844,6 +852,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_fiveActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
@@ -855,7 +864,8 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_addActionPerformed
 
     private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
-         if (jTextField2.getText().equals("")){
+        debug(); 
+        if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
         operations="-"; 
@@ -866,6 +876,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_subActionPerformed
 
     private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
+        debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
@@ -878,6 +889,7 @@ public class gui extends javax.swing.JFrame {
 
     
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
@@ -889,7 +901,8 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_divActionPerformed
     
     private void eqActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eqActionPerformed
-         if (jTextField2.getText().equals("")){
+        debug();
+        if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         String ans;
         jTextField3.setText("");
@@ -901,9 +914,11 @@ public class gui extends javax.swing.JFrame {
         switch(operations){
             case "+":
                 result = CalCoolAtor.add(numfirst,numsecond);
-                if(result>99999999999999L)
+                if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
                 result = 0;
+                operations= "0";
+                chyba=true;
                 break;}
                 ans = fmt(result);
                 
@@ -912,9 +927,11 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "-":
                 result = CalCoolAtor.sub(numfirst, numsecond);
-                if(result>99999999999999L)
+                if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
                 result = 0;
+                operations= "0";
+                chyba=true;
                 break;}
                  ans = fmt(result);
                 jTextField2.setText(ans);
@@ -923,9 +940,11 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "*":
                 result = CalCoolAtor.multiply(numfirst, numsecond);
-                if(result>99999999999999L)
+                if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
                 result = 0;
+                operations= "0";
+                chyba=true;
                 break;}
                  ans = fmt(result);
                 jTextField2.setText(ans);
@@ -934,9 +953,11 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "/":
                 result = CalCoolAtor.divide(numfirst, numsecond);
-                if(result>99999999999999L)
+                if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
                 result = 0;
+                operations= "0";
+                chyba=true;
                 break;}
                 ans = fmt(result);
                 jTextField2.setText(ans);
@@ -945,9 +966,11 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "^":
                 result = CalCoolAtor.power(numfirst, numsecond);
-                if(result>99999999999999L)
+                if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
                 result = 0;
+                operations= "0";
+                chyba=true;
                 break;}
                 ans = fmt(result);
                 jTextField2.setText(ans);
@@ -966,17 +989,25 @@ public class gui extends javax.swing.JFrame {
     }
     
     private void factActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factActionPerformed
+       debug();
         operations = "0";
         jTextField3.setText("");
         String ans;
-        numfirst = Integer.parseInt(jTextField2.getText());
-        resultF = CalCoolAtor.factorial((int) numfirst);
+        numfirst = Long.parseLong(jTextField2.getText());
+        if(numfirst < 17)
+        {resultF = CalCoolAtor.factorial((int) numfirst);
         
         ans = String.format("%d", resultF);   
-        jTextField2.setText(ans);
+        jTextField2.setText(ans);}
+        else 
+            jTextField2.setText("overflow");
+        numfirst = 0;
+        chyba=true;
+        operations= "0";
     }//GEN-LAST:event_factActionPerformed
 
     private void rootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootActionPerformed
+        debug();
         operations = "0";
         jTextField3.setText("");
         String ans;
@@ -987,7 +1018,8 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_rootActionPerformed
 
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
-          char letter = evt.getKeyChar();
+        debug();  
+        char letter = evt.getKeyChar();
           if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
           }   
@@ -1002,6 +1034,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2KeyTyped
 
     private void powerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerActionPerformed
+        debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
