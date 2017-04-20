@@ -10,6 +10,7 @@ import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import static java.lang.Boolean.TRUE;
+import java.util.Locale;
 /**
  *
  * @author Matúš Švancár
@@ -23,10 +24,12 @@ public class gui extends javax.swing.JFrame {
     double result = 0;
     long resultF = 0;
     String nega;
+    static String s;
     String operations= "0";
     boolean zeroflag = true;
     boolean OPflag = false;
-    DecimalFormat f = new DecimalFormat("0.##########");
+    //long podmienka = 99999999999999;
+    DecimalFormat fo = new DecimalFormat("0.##########");
     
     /**
      * Creates new form gui
@@ -56,7 +59,10 @@ public class gui extends javax.swing.JFrame {
     if(f == (long) f)
         return String.format("%d",(long)f);
     else
-        return String.format("%.14s",f);
+        s = String.format(Locale.US,"%.13f",f);
+        s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
+        return s;
+    
 }
     public gui() {
         initComponents();
@@ -895,12 +901,21 @@ public class gui extends javax.swing.JFrame {
         switch(operations){
             case "+":
                 result = CalCoolAtor.add(numfirst,numsecond);
+                if(result>99999999999999L)
+                {jTextField2.setText("overflow");
+                result = 0;
+                break;}
                 ans = fmt(result);
+                
                 jTextField2.setText(ans);
                 numfirst = result;
                 break;
             case "-":
                 result = CalCoolAtor.sub(numfirst, numsecond);
+                if(result>99999999999999L)
+                {jTextField2.setText("overflow");
+                result = 0;
+                break;}
                  ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
@@ -908,6 +923,10 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "*":
                 result = CalCoolAtor.multiply(numfirst, numsecond);
+                if(result>99999999999999L)
+                {jTextField2.setText("overflow");
+                result = 0;
+                break;}
                  ans = fmt(result);
                 jTextField2.setText(ans);
                numfirst = result;
@@ -915,6 +934,10 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "/":
                 result = CalCoolAtor.divide(numfirst, numsecond);
+                if(result>99999999999999L)
+                {jTextField2.setText("overflow");
+                result = 0;
+                break;}
                 ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
@@ -922,6 +945,10 @@ public class gui extends javax.swing.JFrame {
                 break;
             case "^":
                 result = CalCoolAtor.power(numfirst, numsecond);
+                if(result>99999999999999L)
+                {jTextField2.setText("overflow");
+                result = 0;
+                break;}
                 ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
@@ -944,6 +971,7 @@ public class gui extends javax.swing.JFrame {
         String ans;
         numfirst = Integer.parseInt(jTextField2.getText());
         resultF = CalCoolAtor.factorial((int) numfirst);
+        
         ans = String.format("%d", resultF);   
         jTextField2.setText(ans);
     }//GEN-LAST:event_factActionPerformed
