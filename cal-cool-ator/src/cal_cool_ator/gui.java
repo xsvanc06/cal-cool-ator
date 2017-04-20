@@ -939,6 +939,8 @@ public class gui extends javax.swing.JFrame {
     }
     
     private void factActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factActionPerformed
+        operations = "0";
+        jTextField3.setText("");
         String ans;
         numfirst = Integer.parseInt(jTextField2.getText());
         resultF = CalCoolAtor.factorial((int) numfirst);
@@ -947,6 +949,8 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factActionPerformed
 
     private void rootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootActionPerformed
+        operations = "0";
+        jTextField3.setText("");
         String ans;
         numfirst = Double.parseDouble(jTextField2.getText());
         result = CalCoolAtor.root(numfirst);
@@ -973,7 +977,6 @@ public class gui extends javax.swing.JFrame {
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        jTextField2.setText("");
         operations="^";
         jTextField3.setText("^");
         result = 0;
