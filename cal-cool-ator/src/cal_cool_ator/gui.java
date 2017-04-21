@@ -30,7 +30,7 @@ public class gui extends javax.swing.JFrame {
     boolean OPflag = false;
     //long podmienka = 99999999999999;
     DecimalFormat fo = new DecimalFormat("0.##########");
-    
+    boolean resultFlag = false;
     /**
      * Creates new form gui
      */
@@ -59,6 +59,13 @@ public class gui extends javax.swing.JFrame {
        chyba=false;
    }
    
+   public void clear(){
+       jTextField2.setText("0");
+        jTextField3.setText("");
+        numfirst = 0;
+        numsecond = 0;
+        operations = "0";
+   }
    
     public static String fmt(double f)
 {
@@ -738,15 +745,14 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
-         jTextField2.setText("0");
-         jTextField3.setText("");
-         numfirst = 0;
-         numsecond = 0;
-         operations = "0";
-         
+         clear();
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "7";
@@ -755,6 +761,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_sevenActionPerformed
     
     private void fourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fourActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "4";
@@ -763,6 +773,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_fourActionPerformed
 
     private void sixActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sixActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "6";
@@ -771,6 +785,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_sixActionPerformed
 
     private void oneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oneActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "1";
@@ -779,6 +797,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_oneActionPerformed
 
     private void threeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_threeActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "3";
@@ -787,6 +809,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_threeActionPerformed
 
     private void twoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "2";
@@ -806,6 +832,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_negActionPerformed
 
     private void zeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_zeroActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         if(result!=0){jTextField2.setText("");}
         if (!jTextField2.getText().equals("0")){
@@ -833,6 +863,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factorialfarba
 
     private void nineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nineActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "9";
@@ -841,6 +875,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_nineActionPerformed
 
     private void eightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eightActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "8";
@@ -849,6 +887,10 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_eightActionPerformed
 
     private void fiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fiveActionPerformed
+        if(resultFlag==true){
+            clear();
+            resultFlag=false;
+        }
         zmenaoperacie();
         cisti();
         String Writenum = jTextField2.getText() + "5";
@@ -926,9 +968,9 @@ public class gui extends javax.swing.JFrame {
                 chyba=true;
                 break;}
                 ans = fmt(result);
-                
                 jTextField2.setText(ans);
                 numfirst = result;
+                resultFlag=true;
                 break;
             case "-":
                 result = CalCoolAtor.sub(numfirst, numsecond);
@@ -941,7 +983,7 @@ public class gui extends javax.swing.JFrame {
                  ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
-                
+                resultFlag=true;
                 break;
             case "*":
                 result = CalCoolAtor.multiply(numfirst, numsecond);
@@ -951,10 +993,10 @@ public class gui extends javax.swing.JFrame {
                 operations= "0";
                 chyba=true;
                 break;}
-                 ans = fmt(result);
+                ans = fmt(result);
                 jTextField2.setText(ans);
-               numfirst = result;
-                
+                 numfirst = result;
+                resultFlag=true;
                 break;
             case "/":
                 result = CalCoolAtor.divide(numfirst, numsecond);
@@ -967,7 +1009,7 @@ public class gui extends javax.swing.JFrame {
                 ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
-                
+                resultFlag=true;
                 break;
             case "^":
                 result = CalCoolAtor.power(numfirst, numsecond);
@@ -980,6 +1022,7 @@ public class gui extends javax.swing.JFrame {
                 ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
+                resultFlag=true;
                 break; 
             case "√":
                 result = CalCoolAtor.root(numfirst, numsecond);
@@ -992,7 +1035,7 @@ public class gui extends javax.swing.JFrame {
                 ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
-                
+                resultFlag=true;
                 break;
             case "0":
                 result = Double.parseDouble(String.valueOf(jTextField2.getText()));
