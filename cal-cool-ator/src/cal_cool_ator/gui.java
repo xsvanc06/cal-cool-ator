@@ -735,6 +735,7 @@ public class gui extends javax.swing.JFrame {
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
          jTextField2.setText("0");
+         jTextField3.setText("");
          numfirst = 0;
          numsecond = 0;
          operations = "0";
@@ -975,8 +976,20 @@ public class gui extends javax.swing.JFrame {
                 ans = fmt(result);
                 jTextField2.setText(ans);
                 numfirst = result;
-                
                 break; 
+            case "√":
+                result = CalCoolAtor.root(numfirst, numsecond);
+                if(result>99999999999999L || result<-99999999999999L)
+                {jTextField2.setText("overflow");
+                result = 0;
+                operations= "0";
+                chyba=true;
+                break;}
+                ans = fmt(result);
+                jTextField2.setText(ans);
+                numfirst = result;
+                
+                break;
             case "0":
                 result = Double.parseDouble(String.valueOf(jTextField2.getText()));
                 ans = fmt(result);
@@ -989,11 +1002,13 @@ public class gui extends javax.swing.JFrame {
     }
     
     private void factActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factActionPerformed
-       debug();
+        debug();
         operations = "0";
         jTextField3.setText("");
         String ans;
         numfirst = Long.parseLong(jTextField2.getText());
+        if (CalCoolAtor.factorial((int) numfirst)==0) jTextField2.setText("Math Error");
+        else {
         if(numfirst < 17)
         {resultF = CalCoolAtor.factorial((int) numfirst);
         
@@ -1001,6 +1016,7 @@ public class gui extends javax.swing.JFrame {
         jTextField2.setText(ans);}
         else 
             jTextField2.setText("overflow");
+        }
         numfirst = 0;
         chyba=true;
         operations= "0";
@@ -1008,13 +1024,14 @@ public class gui extends javax.swing.JFrame {
 
     private void rootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootActionPerformed
         debug();
-        operations = "0";
-        jTextField3.setText("");
-        String ans;
+        if (jTextField2.getText().equals("")){
+            jTextField2.setText("0");}
         numfirst = Double.parseDouble(jTextField2.getText());
-        result = CalCoolAtor.root(numfirst);
-        ans = fmt(result);
-        jTextField2.setText(ans);
+        operations="√";
+        jTextField3.setText("√");
+        result = 0;
+        numsecond = 0;
+        OPflag = true;
     }//GEN-LAST:event_rootActionPerformed
 
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
