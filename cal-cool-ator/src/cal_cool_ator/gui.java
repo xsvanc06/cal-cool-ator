@@ -75,11 +75,11 @@ public class gui extends javax.swing.JFrame {
         s = String.format(Locale.US,"%.14f",f);
         if(s.startsWith("-")){
             if(s.charAt(16)>= '5' && s.charAt(16) <= '9')
-        s = s.substring(0,14)+(char)(s.charAt(15+1));
+        s = s.substring(0,14)+(char)(s.charAt(15)+1);
             s = s.substring(0,15);}
         else{
         if(s.charAt(15)>= '5' && s.charAt(15) <= '9')
-        s = s.substring(0,13)+(char)(s.charAt(14+1));
+        s = s.substring(0,13)+(char)(s.charAt(14)+1);
         s = s.substring(0,14);}
         s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
         return s;
