@@ -66,6 +66,10 @@ public class gui extends javax.swing.JFrame {
         return String.format("%d",(long)f);
     else
         s = String.format(Locale.US,"%.13f",f);
+        if(s.startsWith("-"))
+            s = s.substring(0,15);
+        else
+        s = s.substring(0,14);
         s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
         return s;
     
