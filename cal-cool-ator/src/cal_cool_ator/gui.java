@@ -60,9 +60,8 @@ public class gui extends javax.swing.JFrame {
    }
    
    public void clear(){
-       jTextField2.setText("0");
+        jTextField2.setText("0");
         jTextField3.setText("");
-        numfirst = 0;
         numsecond = 0;
         operations = "0";
    }
@@ -750,6 +749,7 @@ public class gui extends javax.swing.JFrame {
 
     private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
          clear();
+         numfirst=0;
     }//GEN-LAST:event_clearActionPerformed
          
     private void sevenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sevenActionPerformed
@@ -903,6 +903,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_fiveActionPerformed
 
     private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        resultFlag=false;
         debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
@@ -915,6 +916,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_addActionPerformed
 
     private void subActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subActionPerformed
+        resultFlag=false;
         debug(); 
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
@@ -927,6 +929,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_subActionPerformed
 
     private void mulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mulActionPerformed
+        resultFlag=false;
         debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
@@ -940,6 +943,7 @@ public class gui extends javax.swing.JFrame {
 
     
     private void divActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divActionPerformed
+        resultFlag=false;
         debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
@@ -1074,6 +1078,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_factActionPerformed
 
     private void rootActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rootActionPerformed
+        resultFlag=false;
         debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
@@ -1102,6 +1107,7 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField2KeyTyped
 
     private void powerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerActionPerformed
+        resultFlag=false;
         debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
