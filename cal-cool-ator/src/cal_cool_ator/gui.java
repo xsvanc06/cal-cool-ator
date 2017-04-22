@@ -25,6 +25,8 @@ public class gui extends javax.swing.JFrame {
     long resultF = 0;
     String nega;
     static String s;
+    static int index;
+    static double dsect;
     String operations= "0";
     boolean zeroflag = true;
     boolean OPflag = false;
@@ -71,15 +73,17 @@ public class gui extends javax.swing.JFrame {
     if(f == (long) f)
         return String.format("%d",(long)f);
     else
+        
         s = String.format(Locale.US,"%.14f",f);
+        dsect = Double.parseDouble(s);
+        index = s.indexOf('.');
+        
         if(s.startsWith("-")){
-            if(s.charAt(16)>= '5' && s.charAt(16) <= '9')
-        s = s.substring(0,14)+(char)(s.charAt(15)+1);
-            s = s.substring(0,15);}
+            index = 14 - index;
+             s = String.format(Locale.US,"%."+index+"f",dsect);}
         else{
-        if(s.charAt(15)>= '5' && s.charAt(15) <= '9')
-        s = s.substring(0,13)+(char)(s.charAt(14)+1);
-        s = s.substring(0,14);}
+        index = 13 - index;
+         s = String.format(Locale.US,"%."+index+"f",dsect);}
         s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
         return s;
     
