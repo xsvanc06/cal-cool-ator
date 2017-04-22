@@ -1039,6 +1039,7 @@ public class gui extends javax.swing.JFrame {
                 resultFlag=true;
                 break;
             case "/":
+                try{
                 result = CalCoolAtor.divide(numfirst, numsecond);
                 if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
@@ -1048,6 +1049,13 @@ public class gui extends javax.swing.JFrame {
                 break;}
                 ans = fmt(result);
                 jTextField2.setText(ans);
+                }
+                catch(IllegalArgumentException e)
+                {
+                    clear();
+                    numfirst=0;
+                    jTextField2.setText("Math error");
+                }
                 numfirst = result;
                 resultFlag=true;
                 break;
@@ -1065,6 +1073,8 @@ public class gui extends javax.swing.JFrame {
                 resultFlag=true;
                 break; 
             case "√":
+                try
+                {
                 result = CalCoolAtor.root(numfirst, (long)numsecond);
                 if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
@@ -1074,6 +1084,12 @@ public class gui extends javax.swing.JFrame {
                 break;}
                 ans = fmt(result);
                 jTextField2.setText(ans);
+                }
+                catch(IllegalArgumentException e){
+                    clear();
+                    numfirst = 0;
+                    jTextField2.setText("Math error");
+                }
                 numfirst = result;
                 resultFlag=true;
                 break;
