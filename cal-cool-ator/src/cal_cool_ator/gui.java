@@ -120,7 +120,7 @@ public class gui extends javax.swing.JFrame {
         initComponents();
         setIcon();
         setResizable(false);
-        setSize(606, 1000);
+        setSize(606, 970);
         //jTextField2.requestFocus();
     }
     
@@ -1088,6 +1088,7 @@ public class gui extends javax.swing.JFrame {
                 catch(IllegalArgumentException e){
                     clear();
                     numfirst = 0;
+                    chyba=true;
                     jTextField2.setText("Math error");
                 }
                 numfirst = result;
@@ -1106,22 +1107,28 @@ public class gui extends javax.swing.JFrame {
     
     private void factActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_factActionPerformed
         debug();
+        if(jTextField2.getText().equals(""))
+            jTextField2.setText("-1");
         operations = "0";
         jTextField3.setText("");
         String ans;
         numfirst = Long.parseLong(jTextField2.getText());
-        if (CalCoolAtor.factorial((int) numfirst)==0) jTextField2.setText("Math Error");
-        else {
+        
         if(numfirst < 17)
         {result = CalCoolAtor.factorial((int) numfirst);
-        
+        if (result==0)
+        {
+            jTextField2.setText("Math error");
+            chyba=true;
+        }
+        else{
         ans = fmt(result);   
-        jTextField2.setText(ans);}
+        jTextField2.setText(ans);}}
         else {
             jTextField2.setText("overflow");
             chyba=true;
         }
-        }
+        
         numfirst = result;
         operations= "0";
     }//GEN-LAST:event_factActionPerformed
