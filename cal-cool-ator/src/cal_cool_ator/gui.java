@@ -82,10 +82,15 @@ public class gui extends javax.swing.JFrame {
         operations = "0";
    }
     
-    /**
-     * 
-     * @param f
-     * @return
+     /**
+     * Returns String formatted for 15 character display. 
+     * <p>
+     * This method formats the input double number, returned String 
+     * is max 15 characters long, if number exceeds that length it's
+     * rounded to fit the display
+     *
+     * @param f {double}  floating point number you want to format
+     * @return {String}   formatted String
      */
     public static String fmt(double f)
 {
@@ -99,10 +104,10 @@ public class gui extends javax.swing.JFrame {
         
         if(s.startsWith("-")){
             index = 14 - index;
-             s = String.format(Locale.US,"%."+index+"f",dsect);}
+            s = String.format(Locale.US,"%."+index+"f",dsect);}
         else{
-        index = 13 - index;
-         s = String.format(Locale.US,"%."+index+"f",dsect);}
+            index = 13 - index;
+            s = String.format(Locale.US,"%."+index+"f",dsect);}
         s = s.indexOf(".") < 0 ? s : s.replaceAll("0*$", "").replaceAll("\\.$", "");
         return s;
     
