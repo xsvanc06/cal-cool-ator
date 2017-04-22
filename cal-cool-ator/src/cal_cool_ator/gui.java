@@ -849,13 +849,16 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_zeroActionPerformed
 
     private void pointActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pointActionPerformed
+        if(!"√".equals(operations))
+            if(!"^".equals(operations))
+            {
         debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");
         }
         if(jTextField2.getText().indexOf('.')<0){
         String Writenum = jTextField2.getText() + ".";
-        jTextField2.setText(Writenum);}
+        jTextField2.setText(Writenum);}}
     }//GEN-LAST:event_pointActionPerformed
 
     private void farba(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_farba
@@ -962,7 +965,9 @@ public class gui extends javax.swing.JFrame {
         String ans;
         jTextField3.setText("");
         if(numsecond==0)
-                numsecond = Double.parseDouble(jTextField2.getText());
+                if(!"√".equals(operations)) numsecond = Double.parseDouble(jTextField2.getText());
+                else numsecond = Long.parseLong(jTextField2.getText());
+        
         //DecimalFormat f = new DecimalFormat("0.#########");
         
 
@@ -1003,7 +1008,7 @@ public class gui extends javax.swing.JFrame {
                 break;}
                 ans = fmt(result);
                 jTextField2.setText(ans);
-                 numfirst = result;
+                numfirst = result;
                 resultFlag=true;
                 break;
             case "/":
@@ -1020,7 +1025,7 @@ public class gui extends javax.swing.JFrame {
                 resultFlag=true;
                 break;
             case "^":
-                result = CalCoolAtor.power(numfirst, numsecond);
+                result = CalCoolAtor.power(numfirst, (long)numsecond);
                 if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
                 result = 0;
@@ -1033,7 +1038,7 @@ public class gui extends javax.swing.JFrame {
                 resultFlag=true;
                 break; 
             case "√":
-                result = CalCoolAtor.root(numfirst, numsecond);
+                result = CalCoolAtor.root(numfirst, (long)numsecond);
                 if(result>99999999999999L || result<-99999999999999L)
                 {jTextField2.setText("overflow");
                 result = 0;

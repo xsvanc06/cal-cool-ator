@@ -68,7 +68,7 @@ public class CalCoolAtor {
      * @return 
      * @return Umocnené číslo.
      */
-    public static double power(double a, double b)
+    public static double power(double a, long b)
        {
               return (Math.pow(a,b));
        }
@@ -78,12 +78,13 @@ public class CalCoolAtor {
      * Root from number.
      * @return Rooted number.
      */
-    public static double root(double a, double b)
+    public static double root(double a, long b)
        {
+            double c = divide(1,(double)b);
             if(b==0) throw new IllegalArgumentException("");
-            if (b%2==0) 
+            if (b%2==0)
                 if(a<0) throw new IllegalArgumentException("Odmocnina zo zaporneho cisla");
-            return (Math.pow(a,1/b));
+            return (Math.pow(a,c));
        }
 
     /**
@@ -104,7 +105,6 @@ public class CalCoolAtor {
 
     public static void main(String[] args)
        {
-              
-    
+       
        }
 }
