@@ -5,6 +5,8 @@
  */
 package cal_cool_ator;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.*;
 /**
  *
@@ -12,14 +14,14 @@ import java.util.*;
  */
 public class profiling {
  
-    public static void main(String[] args){
+    public static void main(String[] args) throws FileNotFoundException{
         double suma = 0;
         
-        Scanner scan = new Scanner(System.in);
-        int N = scan.nextInt();
+        Scanner in = new Scanner(new FileReader("input.txt"));
+        int N = in.nextInt();
         Vector<Double> vector = new Vector<>();
         for(int i=0; i<N;i++)
-           vector.add(scan.nextDouble());
+           vector.add(in.nextDouble());
         for(int i=0;i<N;i++){
             suma=CalCoolAtor.add(vector.get(i), suma);
         }
