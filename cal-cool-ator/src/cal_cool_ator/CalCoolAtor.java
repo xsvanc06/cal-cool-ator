@@ -6,15 +6,14 @@
 package cal_cool_ator;
 
 /**
- *
  * @author Matúš Švancár
  * @author Martin Rakovický
  */
 public class CalCoolAtor {
     
     /**
-     * 
      * Addition of two numbers.
+     * 
      * @return The sum of a and b.
      */
     public static double add(double a, double b)
@@ -23,8 +22,8 @@ public class CalCoolAtor {
        }
 
     /**
-     *
      * Subtraction of two numbers.
+     * 
      * @return The difference of a and b.
      */
     public static double sub(double a, double b)
@@ -33,8 +32,8 @@ public class CalCoolAtor {
        }
 
     /**
-     *
      * Negation of number.
+     * 
      * @return Negative value of number.
      */
     public static double neg(double a)
@@ -43,8 +42,8 @@ public class CalCoolAtor {
        }
 
     /**
-     *
      * Multiplication of two numbers.
+     * 
      * @return The product of a and b.
      */
     public static double multiply(double a, double b)
@@ -53,8 +52,8 @@ public class CalCoolAtor {
        }
 
     /**
-     * 
      * Dividing of two numbers.
+     * 
      * @return The part of a and b.
      */
     public static double divide(double a, double b)
@@ -63,10 +62,9 @@ public class CalCoolAtor {
        }
 
     /**
-     *
      * Exponentiation of number.
-     * @return 
-     * @return Umocnené číslo.
+     * 
+     * @return Multiplied number.
      */
     public static double power(double a, double b)
        {
@@ -74,8 +72,8 @@ public class CalCoolAtor {
        }
 
     /**
-     *
      * Root from number.
+     * 
      * @return Rooted number.
      */
     public static double root(double a, double b)
@@ -87,8 +85,8 @@ public class CalCoolAtor {
        }
 
     /**
-     *
      * Factorial of number.
+     * 
      * @return Result of factorial.
      */
     public static long factorial(int a)
