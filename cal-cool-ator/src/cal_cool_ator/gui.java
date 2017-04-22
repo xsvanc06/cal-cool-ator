@@ -828,10 +828,10 @@ public class gui extends javax.swing.JFrame {
         debug();
         if (jTextField2.getText().equals("")){
             jTextField2.setText("0");}
-        Double ops = Double.parseDouble(String.valueOf(jTextField2.getText()));
-       if(ops!=0){ ops = ops * (-1);
+       Double ops = Double.parseDouble(String.valueOf(jTextField2.getText()));
+       if(ops!=0){ ops = CalCoolAtor.neg(ops);
        nega = fmt(ops);
-        jTextField2.setText(nega);
+       jTextField2.setText(nega);
        }
     }//GEN-LAST:event_negActionPerformed
 
@@ -1065,15 +1065,16 @@ public class gui extends javax.swing.JFrame {
         if (CalCoolAtor.factorial((int) numfirst)==0) jTextField2.setText("Math Error");
         else {
         if(numfirst < 17)
-        {resultF = CalCoolAtor.factorial((int) numfirst);
+        {result = CalCoolAtor.factorial((int) numfirst);
         
-        ans = String.format("%d", resultF);   
+        ans = fmt(result);   
         jTextField2.setText(ans);}
-        else 
+        else {
             jTextField2.setText("overflow");
+            chyba=true;
         }
-        numfirst = 0;
-        chyba=true;
+        }
+        numfirst = result;
         operations= "0";
     }//GEN-LAST:event_factActionPerformed
 
