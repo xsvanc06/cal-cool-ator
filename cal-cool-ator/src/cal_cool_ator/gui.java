@@ -1124,7 +1124,8 @@ public class gui extends javax.swing.JFrame {
     }//GEN-LAST:event_rootActionPerformed
 
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
-        debug();  
+        zmenaoperacie();
+        cisti();
         char letter = evt.getKeyChar();
           if (jTextField2.getText().equals("0")){
             jTextField2.setText("");
