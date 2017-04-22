@@ -120,7 +120,6 @@ public class gui extends javax.swing.JFrame {
         initComponents();
         setIcon();
         setResizable(false);
-        setSize(606, 970);
         //jTextField2.requestFocus();
     }
     
@@ -196,6 +195,7 @@ public class gui extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jTextField2.setFont(new java.awt.Font("Open Sans", 0, 67)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(30, 30, 30));
