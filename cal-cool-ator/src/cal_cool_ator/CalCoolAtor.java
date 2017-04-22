@@ -78,11 +78,17 @@ public class CalCoolAtor {
      */
     public static double root(double a, long b)
        {
-            double c = divide(1,(double)b);
             if(b==0) throw new IllegalArgumentException("");
-            if (b%2==0)
-                if(a<0) throw new IllegalArgumentException("Odmocnina zo zaporneho cisla");
-            return (Math.pow(a,c));
+            double c = divide(1,(double)b);
+            if(a<0){
+                if (b%2==0)
+                    throw new IllegalArgumentException("Odmocnina zo zaporneho cisla");
+                a=-a;
+                
+                return (Math.pow(a,c)*-1);
+            }
+            else
+                return (Math.pow(a,c));
        }
 
     /**
