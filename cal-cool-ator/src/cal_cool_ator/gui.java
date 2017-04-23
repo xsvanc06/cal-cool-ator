@@ -34,7 +34,9 @@ public class gui extends javax.swing.JFrame {
     DecimalFormat fo = new DecimalFormat("0.##########");
     boolean resultFlag = false;
     /**
-     * Creates new form gui
+     * Auxilary function for clearing display.
+     * Clears display, if there's 0 on display
+     * Clears display, if there's result on display and sets result variable to 0
      */
     public void cisti(){
         if (jTextField2.getText().equals("0")){
@@ -45,7 +47,7 @@ public class gui extends javax.swing.JFrame {
     }
     
     /**
-     * Change operation.
+     * Clears display if the operation is changed after entering first operand.
      */
     public void zmenaoperacie(){
         if(OPflag==true){
@@ -55,7 +57,7 @@ public class gui extends javax.swing.JFrame {
     }
     
     /**
-     * Sets the dimensions.
+     * If the text exceeds display (14 characters) the last character is consumed.
      */
     public void rozmery()
     { if(jTextField2.getText().length()>=15) {  
@@ -64,7 +66,7 @@ public class gui extends javax.swing.JFrame {
     }
     
     /**
-     * Check errors.
+     * If error occured, clear the error message from display.
      */
    public void debug()
    {if(chyba==true)
@@ -73,7 +75,7 @@ public class gui extends javax.swing.JFrame {
    }
    
     /**
-     * Reset display and memory.
+     * Reset second display and variables.
      */
    public void clear(){
         jTextField2.setText("0");

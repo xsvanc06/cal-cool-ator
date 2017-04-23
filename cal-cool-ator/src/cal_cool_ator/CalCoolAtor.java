@@ -13,8 +13,9 @@ public class CalCoolAtor {
     
     /**
      * Addition of two numbers.
-     * 
-     * @return The sum of a and b.
+     * @param a {double} floating point number 
+     * @param b {double} floating point number
+     * @return The sum of a and b. 
      */
     public static double add(double a, double b)
        {
@@ -23,7 +24,8 @@ public class CalCoolAtor {
 
     /**
      * Subtraction of two numbers.
-     * 
+     * @param a {double} floating point number 
+     * @param b {double} floating point number
      * @return The difference of a and b.
      */
     public static double sub(double a, double b)
@@ -33,7 +35,7 @@ public class CalCoolAtor {
 
     /**
      * Negation of number.
-     * 
+     * @param a {double} floating point number
      * @return Negative value of number.
      */
     public static double neg(double a)
@@ -43,7 +45,8 @@ public class CalCoolAtor {
 
     /**
      * Multiplication of two numbers.
-     * 
+     * @param a {double} floating point number 
+     * @param b {double} floating point number
      * @return The product of a and b.
      */
     public static double multiply(double a, double b)
@@ -53,7 +56,9 @@ public class CalCoolAtor {
 
     /**
      * Dividing of two numbers.
-     * 
+     * @param a {double} floating point number 
+     * @param b {double} floating point number
+     * @throws IllegalArgumentException if b is null
      * @return The part of a and b.
      */
     public static double divide(double a, double b)
@@ -63,7 +68,8 @@ public class CalCoolAtor {
 
     /**
      * Exponentiation of number.
-     * 
+     * @param a {double} floating point number 
+     * @param b {double} floating point number
      * @return Multiplied number.
      */
     public static double power(double a, long b)
@@ -73,8 +79,14 @@ public class CalCoolAtor {
 
     /**
      * Root from number.
-     * 
-     * @return Rooted number.
+     * <p>
+     * @param a {double} floating point number 
+     * @param b {double} floating point number
+     * @throws IllegalArgumentException if b is null
+     * @throws IllegalArgumentException if a is less then null and
+     * if b%2 is equal to null 
+     * @return Rooted number, or negative value of rooted number 
+     * if a is less then null and if b%2 is equal to null
      */
     public static double root(double a, long b)
        {
@@ -93,8 +105,9 @@ public class CalCoolAtor {
 
     /**
      * Factorial of number.
-     * 
-     * @return Result of factorial.
+     * @param a {double} integer number 
+     * @return result of factorial, or 0 if a is lower then null, 
+     * or 1 if a is equal 0 or 1.
      */
     public static long factorial(int a)
         {
@@ -105,10 +118,5 @@ public class CalCoolAtor {
 
        vysledok = factorial(a-1) * a;
        return vysledok;
-       }
-
-    public static void main(String[] args)
-       {
-       
        }
 }
