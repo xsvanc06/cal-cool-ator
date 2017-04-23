@@ -86,10 +86,10 @@ public class CalCoolAtorTest {
     /**
      * Test of factorial method with negative base
      */
-    @Test(expected=IllegalArgumentException.class)
+    @Test
     public void testFactorialIllegal() {
         int x1 = -5;
-        long expResult = 1;
+        long expResult = 0;
         assertEquals(expResult, testClass.factorial(x1));
     }
 
@@ -167,11 +167,17 @@ public class CalCoolAtorTest {
     @Test
     public void testRoot() {
         double x1 = 0.0;
+        long x2 = 3;
         double expResult = 0.0;
-        assertEquals(expResult, testClass.root(x1), 0.000001);
+        assertEquals(expResult, testClass.root(x1,x2), 0.000001);
         x1 = 9.0;
+        x2 = 2;
         expResult = 3.0;
-        assertEquals(expResult, testClass.root(x1), 0.000001);
+        assertEquals(expResult, testClass.root(x1,x2), 0.000001);
+        x1 = -27.0;
+        x2 = 3;
+        expResult = -3.0;
+        assertEquals(expResult, testClass.root(x1,x2), 0.000001);
     }
     
     
@@ -181,11 +187,13 @@ public class CalCoolAtorTest {
     @Test(expected=IllegalArgumentException.class)
     public void testRootIllegal() {
         double x1 = -4.0;
+        long x2 = 4;
         double expResult = 0;
-        assertEquals(expResult, testClass.root(x1), 0.0000001);
+        assertEquals(expResult, testClass.root(x1,x2), 0.0000001);
         x1 = -3.2;
+        x2 = 8;
         expResult = 0;
-        assertEquals(expResult, testClass.root(x1), 0.0000001);
+        assertEquals(expResult, testClass.root(x1,x2), 0.0000001);
     }
     
 
