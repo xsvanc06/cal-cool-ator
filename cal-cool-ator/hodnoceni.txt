@@ -1,0 +1,4 @@
+xsvanc06 100 matematická knižnica, GUI, funkcie
+xsalgo00 100 testy, funkcie
+xsimur04 100 GUI, profiling, mockup
+xrakov00 100 dokumentácia, inštalátor
