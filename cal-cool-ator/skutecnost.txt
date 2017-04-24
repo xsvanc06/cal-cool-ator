@@ -1,0 +1,33 @@
+1/TERMÍNY
+Veškeré termíny byly dodreny dle èasového plánu. Jednotlivé procesy se vzájemnì prolínaly,
+a nìkteré se podaøilo zapoèít dokonce døíve, ne stanovoval termín. Podaøilo se zachovat 
+transparentnost a systematiènost úloh. 
+
+2/ TİM
+Èlenové tımu pracovali systematicky a díky verzovacímu systému a obèasnım zásahùm manaera projektu
+se daøilo dret èasového plánu. Pøedem stanovené úlohy pro programátory nebyly striktnì dodrovány, 
+pøedevším kvùli pøetìování jednotlivcù danou úlohou a taky faktu, e ryze jednostranı pøístup k 
+problému se mùe zpùspbit další nepøíjemnosti.
+
+3/DEKOMPOZICE
+Jednotlivé úkoly jsme vdy do detailu probrali a stanovili nejvhodnìjší postup. Navzájem jsme sdíleli
+zkušenosti a tipy a zjišovali nové informace z dostupnıch zdrojù.
+
+4/KOMUNIKACE
+Oproti pùvodnímu plánu jsme nakonec zavrhli komunikaèní kanál Google Hangouts. Pro rychlé spojení 
+se hodil Facebook Messenger. Podrobnì jsme pak problémy rozebírali na jednom z GIT friendly chatù 
+- Gitter.io. Velmi pøínosná byla rovnì sluba GIT Issues, která umoòuje trackovat prùbìh práce
+a zadávat nové cíle.
+
+5/VERZOVACÍ SYSTÉM
+Jak u bylo zmínìno, k verzování nám poslouil oblíbenı nástroj GIT. Díky jeho pouití se práce stala
+dalekok flexibilnìjší a efektivnìjší. Commity pak znaènì usnadnily orientaci a rozlišení jednotlivıch 
+verzí.
+
+6/CELKOVÉ ZHODNOCENÍ
+Vısledkem naší práce je kalkulaèka s moderním vzhledem, která plnì odpovídá zadání. Pøipravili jsme
+rovnì mockupy její vylepšené verze a další náleitosti, uvedené v zadání. Vìtšina potíí, se kterımi
+jsme se v prùbìhu tvorby aplikace støetli, se nám podaøila úspìšnì vyøešit. A v závìru jsme narazili
+na pøekáku v podobì tvorby Makefile. Ten se pro námi zvolenou platformu (Java na OS WINDOWS) pøíliš 
+nepouívá, a tak jsme jej nakonec vynechali. Všichni èlenové tımu byli proaktivní a manaer projevil
+spoustu empatie.
